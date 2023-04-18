@@ -1,0 +1,76 @@
+#!/bin/bash
+#SBATCH -A renard
+#SBATCH --time=40:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=150G
+
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/yeastInter_st.txt yeastInter_st.txt 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/yeastInter_st.txt yeastInter_st.txt 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/yeastInter_st.txt yeastInter_st.txt 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/yeastInter_st.txt yeastInter_st.txt 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/yeastInter_st.txt yeastInter_st.txt 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 3 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 3 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 3 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 3 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/3/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 3 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_so_tags.edgelist kaggle_so_tags.edgelist 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/kaggle_star_wars.edgelist kaggle_star_wars.edgelist 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/yeastInter_st.txt yeastInter_st.txt 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/yeastInter_st.txt yeastInter_st.txt 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/yeastInter_st.txt yeastInter_st.txt 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/yeastInter_st.txt yeastInter_st.txt 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/yeastInter_st.txt yeastInter_st.txt 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_barabasi_albert_graph_m_1 random_graphs/0_barabasi_albert_graph_m_1 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/0_ferdos_renyi_graph_m_2000 random_graphs/0_barabasi_albert_graph_m_2random_graphs/0_ferdos_renyi_graph_m_2000 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_cancer_cutoff_0.935.edgelist human_cancer_cutoff_0.935.edgelist 4 5
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 4 1
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 4 2
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 4 3
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 4 4
+./run_benchmark.sh /hpi/fs00/home/tim.garrels/masterthesis/logs/benchmarking_logs/4/human_brain_development_cutoff_0.772.edgelist human_brain_development_cutoff_0.772.edgelist 4 5
