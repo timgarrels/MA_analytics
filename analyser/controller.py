@@ -10,10 +10,10 @@ from tqdm import tqdm
 from pmotif_lib import config
 from pmotif_lib.result_transformer import ResultTransformer
 
-from pmotif_detection.analyse_scripts.util import add_consolidated_metrics
-from pmotif_detection.analyse_scripts.local_scope import LocalScope
-from pmotif_detection.analyse_scripts.global_scope import GlobalScope
-from pmotif_detection.analyse_scripts.report_generator import create
+from analyser.util import add_consolidated_metrics
+from analyser.local_scope import LocalScope
+from analyser.global_scope import GlobalScope
+from analyser.report_generator import create
 
 OUTPUT_PATH = "out"
 

@@ -18,7 +18,7 @@ from pmotif_lib.graphlet_representation import (
 from pmotif_lib.p_motif_graph import PMotifGraph
 from pmotif_lib.graphlet_representation import GRAPHLET_CLASS_NAME_LOOKUP
 
-from pmotif_detection.analyse_scripts.util import (
+from analyser.util import (
     to_graphlet_class_frequency,
     get_zscore,
     extract_metric_distribution,
