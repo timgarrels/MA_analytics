@@ -36,7 +36,7 @@ def generate_line(edgelist_path: Path, graphlet_size: int, benchmarking_run: int
 
 def main():
     """Generate sbatch file."""
-    with open("slurm_benchmark.batch", "w", encoding="utf-8") as sbtach_file:
+    with open("../run_scripts/slurm_benchmark.batch", "w", encoding="utf-8") as sbtach_file:
         for line in PREAMBLE_LINES:
             sbtach_file.write(line)
             sbtach_file.write("\n")

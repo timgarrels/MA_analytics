@@ -119,6 +119,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--graphlet_size", required=True, type=int, default=3, choices=[3, 4]
     )
+    parser.add_argument("--random_graphs", required=False, type=int, default=0)
     parser.add_argument(
         "--benchmarking_run", required=True, type=int, choices=[1, 2, 3, 4, 5]
     )
@@ -126,18 +127,18 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     GRAPH_EDGELIST = DATASET_DIRECTORY / args.edgelist_name
-    OUT = EXPERIMENT_OUT / "benchmarking" / GRAPH_EDGELIST.stem
+    OUT = EXPERIMENT_OUT / "benchmarking" / "out" / GRAPH_EDGELIST.stem
     GRAPHLET_SIZE = args.graphlet_size
-    RANDOM_GRAPHS = 100
+    RANDOM_GRAPHS = args.random_graphs
     BENCHMARKING_RUN = args.benchmarking_run
 
     makedirs(OUT, exist_ok=True)
-    makedirs("benchmarking_logs", exist_ok=True)
+    logs_out = EXPERIMENT_OUT / "benchmarking" / "benchmarking_logs"
+    makedirs(logs_out, exist_ok=True)
 
-    logfile = f"benchmarking_logs/{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}_{GRAPHLET_SIZE}_" \
-              f"{RANDOM_GRAPHS}.benchmark"
+    logfile = f"{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}_{GRAPHLET_SIZE}_{RANDOM_GRAPHS}.benchmark"
     logging.basicConfig(
-        filename=logfile,
+        filename=logs_out / logfile,
         filemode="a",
         format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
         datefmt="%H:%M:%S",
@@ -150,4 +151,4 @@ if __name__ == "__main__":
     main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, RANDOM_GRAPHS)
     total_runtime = time.time() - total_runtime_start
     logger.info("Total Runtime: %s", total_runtime)
-    shutil.rmtree(EXPERIMENT_OUT / "benchmarking")
+    shutil.rmtree(EXPERIMENT_OUT / "benchmarking" / "out")
