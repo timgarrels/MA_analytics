@@ -1,0 +1,6 @@
+pmotif_lib==1.0.0
+tqdm==4.65.0
+networkx==3.1
+pandas==2.0.0
+matplotlib==3.7.1
+scipy==1.10.1
