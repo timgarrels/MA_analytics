@@ -130,6 +130,9 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
     analysis_out = analysis_out / edgelist.name
     analysis_out = analysis_out / "raw" / str(graphlet_size)
     os.makedirs(analysis_out, exist_ok=True)
+
+    graphlet_data = graphlet_data / edgelist.stem
+
     original_r = ResultTransformer.load_result(edgelist, graphlet_data, graphlet_size)
     # Frequency Data
     compute_metric_frequencies(original_r, analysis_out)
@@ -142,9 +145,9 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--analysis_out", required=True, type=Path)
-    parser.add_argument("--edgelist_name", required=True, type=Path)
+    parser.add_argument("--edgelist_path", required=True, type=Path)
     parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
     parser.add_argument("--graphlet_data", required=True, type=Path)
 
     args = parser.parse_args()
-    create_analysis_data(args.analysis_out, args.edgelist_name, args.graphlet_size, args.graphlet_data)
+    create_analysis_data(args.analysis_out, args.edgelist_path, args.graphlet_size, args.graphlet_data)
