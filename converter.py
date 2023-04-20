@@ -9,10 +9,12 @@ from pathlib import Path
 from tqdm import tqdm
 
 
+DISABLE_TQDM = True
+
 def read_graphlet_metrics(file_path: Path):
     with open(file_path, "r", encoding="utf-8") as f:
         total = int(f.readline().strip())
-        data = [json.loads(l) for l in tqdm(f, total=total)]
+        data = [json.loads(l) for l in tqdm(f, total=total, disable=DISABLE_TQDM)]
     return data
 
 
@@ -20,7 +22,7 @@ def read_graph_modules(file_path: Path):
     graph_modules = []
     with open(file_path, "r", encoding="utf-8") as f:
         total = int(f.readline().strip())
-        for l in tqdm(f, total=total):
+        for l in tqdm(f, total=total, disable=DISABLE_TQDM):
             graph_modules.append(l.strip().split(" "))
 
     return graph_modules
@@ -29,7 +31,7 @@ def read_graph_modules(file_path: Path):
 def read_anchor_nodes(file_path: Path):
     with open(file_path, "r", encoding="utf-8") as f:
         total = int(f.readline().strip())
-        data = [l.strip() for l in tqdm(f, total=total)]
+        data = [l.strip() for l in tqdm(f, total=total, disable=DISABLE_TQDM)]
     return data
 
 
@@ -37,7 +39,7 @@ def read_anchor_node_shortest_path(file_path: Path):
     data = {}
     with open(file_path, "r", encoding="utf-8") as f:
         total = int(f.readline().strip())
-        for l in tqdm(f, total=total):
+        for l in tqdm(f, total=total, disable=DISABLE_TQDM):
             anchor_node, *parts = l.split(" ")
             data[anchor_node] = json.loads(" ".join(parts))
     return data
