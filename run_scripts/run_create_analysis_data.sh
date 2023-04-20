@@ -19,7 +19,7 @@ cd $REPO_PATH
 
 $REPO_PATH/.venv/bin/python3 create_analysis_data.py \
   --analysis_out $ANAYLSIS_OUT \
-  --edgelist_name $EDGELIST_PATH \
+  --edgelist_path $EDGELIST_PATH \
   --graphlet_size $GRAPHLET_SIZE \
   --graphlet_data $EXPERIMENT_OUT \
   2> $LOG_DIR/err.log 1> $LOG_DIR/std.log
