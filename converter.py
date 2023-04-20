@@ -1,13 +1,12 @@
 """We have results computed with an old pmotif_lib version.
 Their format is not readable anymore by the current pmotif_lib version, but theoretically compatible.
 This converts an old format into the new one."""
+import argparse
 import json
 import os
 import statistics
 from pathlib import Path
 from tqdm import tqdm
-
-TARGET = Path("./conversion_target/kaggle_star_wars.edgelist_motifs/3/positional_data")
 
 
 def read_graphlet_metrics(file_path: Path):
@@ -88,13 +87,13 @@ def convert_anchor_node_distance(metrics, anchor_nodes, anchor_node_shortest_pat
             out.write("\n")
 
 
-def main():
-    metrics = read_graphlet_metrics(TARGET / "graphlet_metrics")
-    anchor_nodes = read_anchor_nodes(TARGET / "anchor_nodes")
-    graph_modules = read_graph_modules(TARGET / "graph_modules")
-    anchor_node_shortest_paths = read_anchor_node_shortest_path(TARGET / "anchor_node_shortest_paths")
+def main(target: Path):
+    metrics = read_graphlet_metrics(target / "graphlet_metrics")
+    anchor_nodes = read_anchor_nodes(target / "anchor_nodes")
+    graph_modules = read_graph_modules(target / "graph_modules")
+    anchor_node_shortest_paths = read_anchor_node_shortest_path(target / "anchor_node_shortest_paths")
 
-    outpath = TARGET.parent / "pmetrics"
+    outpath = target.parent / "pmetrics"
     os.makedirs(outpath)
     convert_degree(metrics, outpath)
     convert_graph_modules(metrics, graph_modules, outpath)
@@ -102,4 +101,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--target_path", required=True, type=Path)
+    args = parser.parse_args()
+    main(args.target_path)
