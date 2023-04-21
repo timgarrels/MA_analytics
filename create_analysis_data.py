@@ -1,6 +1,8 @@
+"""Prepare the generation of analysis artifacts by refining metrics and storing them on disk."""
 import argparse
 import json
 import os
+import shutil
 from pathlib import Path
 from statistics import median
 from typing import Dict
@@ -125,6 +127,24 @@ def compute_metric_frequencies(original_r: ResultTransformer, analysis_out: Path
         dump_frequency(randomized_result)
 
 
+def dump_consolidated_metrics(r: ResultTransformer, analysis_out: Path):
+    """Dump each consolidated metric on disk."""
+    outpath = analysis_out / r.pmotif_graph.edgelist_path.name / "consolidated_metrics"
+    os.makedirs(outpath, exist_ok=True)
+    for metric_name in r.consolidated_metrics:
+        metric_values = r.positional_metric_df.groupby("graphlet_class").agg(list)[metric_name]
+        with open(outpath / metric_name, "w", encoding="utf-8") as out:
+            json.dump(dict(metric_values), out)
+
+
+def dump_graphlet_occurrences(r: ResultTransformer, analysis_out: Path):
+    """Dump the graphlet occurrences on disk."""
+    outpath = analysis_out / r.pmotif_graph.edgelist_path.name
+    occurrences = r.positional_metric_df.groupby("graphlet_class").agg(list)["nodes"]
+    with open(outpath / "graphlet_occurrences", "w", encoding="utf-8") as out:
+        json.dump(dict(occurrences), out)
+
+
 def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int, graphlet_data: Path):
     """Calculate frequency data and (consolidated) pmetric data and store to disk for later use."""
     analysis_out = analysis_out / edgelist.name
@@ -138,8 +158,10 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
     compute_metric_frequencies(original_r, analysis_out)
     # PMetric Data
     add_consolidated_metrics(original_r)
+    dump_consolidated_metrics(original_r, analysis_out)
+    dump_graphlet_occurrences(original_r, analysis_out)
+
     compute_pairwise_results(original_r, analysis_out, graphlet_size)
-    return analysis_out
 
 
 if __name__ == "__main__":
