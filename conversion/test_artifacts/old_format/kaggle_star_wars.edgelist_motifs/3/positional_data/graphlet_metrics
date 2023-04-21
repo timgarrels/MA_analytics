@@ -1,0 +1,1361 @@
+1360
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 25, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 28, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 69, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 53, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 58, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 2, 2], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 2, 2], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 64, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 57, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 64, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 77, "anchor_node_distances": [0, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 76, "anchor_node_distances": [0, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [0, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 73, "anchor_node_distances": [0, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 81, "anchor_node_distances": [0, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 81, "anchor_node_distances": [0, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 72, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 70, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [0, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 77, "anchor_node_distances": [0, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 66, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 62, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 71, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 58, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 67, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 72, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 59, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 68, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 62, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 58, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 66, "anchor_node_distances": [0, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 57, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 53, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 62, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 69, "anchor_node_distances": [0, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 60, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [0, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 65, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 60, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 63, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 78, "anchor_node_distances": [0, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 78, "anchor_node_distances": [0, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 69, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [0, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 56, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 27, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 16, "anchor_node_distances": [1, 1, 2, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 35, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 76, "anchor_node_distances": [1, 0, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 77, "anchor_node_distances": [1, 0, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 0, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [1, 0, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 76, "anchor_node_distances": [1, 0, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 72, "anchor_node_distances": [1, 0, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 0, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 0, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 58, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 51, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 0, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 29, "anchor_node_distances": [1, 1, 1, 1, 2, 1], "graph_module_participation": [0]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 29, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 24, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 29, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 28, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 70, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 70, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 72, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 71, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [0, 1]}
+{"degree": 69, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 70, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 69, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 68, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 67, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 76, "anchor_node_distances": [1, 1, 1, 0, 0, 0], "graph_module_participation": [1]}
+{"degree": 80, "anchor_node_distances": [1, 1, 0, 0, 1, 0], "graph_module_participation": [1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 1, 0, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 75, "anchor_node_distances": [1, 1, 0, 0, 0, 1], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 0, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 0, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 56, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 53, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 65, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 64, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 55, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 0, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 57, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 60, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 66, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 63, "anchor_node_distances": [1, 1, 0, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 75, "anchor_node_distances": [1, 1, 0, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 58, "anchor_node_distances": [1, 1, 0, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 54, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 61, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 59, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 39, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 0, 1], "graph_module_participation": [1]}
+{"degree": 62, "anchor_node_distances": [1, 1, 1, 1, 0, 0], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 48, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 45, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 40, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 49, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 52, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 46, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 41, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 43, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 44, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 47, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 42, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [0, 1]}
+{"degree": 51, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 50, "anchor_node_distances": [1, 1, 1, 1, 1, 0], "graph_module_participation": [1]}
+{"degree": 38, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 35, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 37, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 34, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 31, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 28, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 28, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 29, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 28, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 36, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 32, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 30, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 33, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [0, 1]}
+{"degree": 26, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
+{"degree": 22, "anchor_node_distances": [1, 1, 1, 1, 1, 1], "graph_module_participation": [1]}
