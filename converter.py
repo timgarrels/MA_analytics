@@ -1,6 +1,16 @@
 """We have results computed with an old pmotif_lib version.
 Their format is not readable anymore by the current pmotif_lib version, but theoretically compatible.
-This converts an old format into the new one."""
+This converts an old format into the new one.
+
+Used with the following bash tools:
+Create an `all_targets` file containing all potential targets
+`find . -name positional_data -type d > all_targets`
+
+Feed all potential targets into the converter.py script using parallelization and a progress bar
+Make sure to replace "python3" with the virtualenv python and "converter.py" to the abs. path to the script!
+`cat all_targets | parallel --bar -P 8 python3 converter.py --target_path {}`
+
+"""
 import argparse
 import json
 import os
