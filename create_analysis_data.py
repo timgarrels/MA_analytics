@@ -124,7 +124,6 @@ def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path):
             tqdm(
                 compare_args,
                 desc="Processing random graphs",
-                leave=False,
             ),
             chunksize=1,
         )
