@@ -104,6 +104,7 @@ def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path, 
             graphlet_size,
             supress_tqdm=SUPRESS_TQDM,
         )
+        dump_frequency(analysis_out, random_r)
         add_consolidated_metrics(random_r)
 
         for metric_name in original_r.consolidated_metrics:
@@ -112,26 +113,12 @@ def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path, 
                 json.dump(data, out)
 
 
-def compute_metric_frequencies(original_r: ResultTransformer, analysis_out: Path):
-    """Store the count of graphlet occurrences on disk, grouped by graphlet class.
-    Done for the original and each random graph."""
-    randomized_graph = PMotifGraphWithRandomization.create_from_pmotif_graph(original_r.pmotif_graph, -1)
-
-    def dump_frequency(r: ResultTransformer):
-        frequency = to_graphlet_class_frequency(r.positional_metric_df)
-        os.makedirs(analysis_out / r.pmotif_graph.edgelist_path.name, exist_ok=True)
-        with open(analysis_out / r.pmotif_graph.edgelist_path.name / f"frequency", "w", encoding="utf-8") as out:
-            json.dump(frequency, out)
-
-    dump_frequency(original_r)
-    for r_p_graph in tqdm(randomized_graph.swapped_graphs, desc="Processing random graphs: Frequency"):
-        randomized_result = ResultTransformer.load_result(
-            r_p_graph.edgelist_path,
-            r_p_graph.output_directory,
-            original_r.graphlet_size,
-            supress_tqdm=SUPRESS_TQDM,
-        )
-        dump_frequency(randomized_result)
+def dump_frequency(analysis_out: Path, r: ResultTransformer):
+    """Dump the graphlet class frequency to disk."""
+    frequency = to_graphlet_class_frequency(r.positional_metric_df)
+    os.makedirs(analysis_out / r.pmotif_graph.edgelist_path.name, exist_ok=True)
+    with open(analysis_out / r.pmotif_graph.edgelist_path.name / f"frequency", "w", encoding="utf-8") as out:
+        json.dump(frequency, out)
 
 
 def dump_consolidated_metrics(r: ResultTransformer, analysis_out: Path):
@@ -161,8 +148,7 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
     graphlet_data = graphlet_data / edgelist.stem
 
     original_r = ResultTransformer.load_result(edgelist, graphlet_data, graphlet_size, supress_tqdm=SUPRESS_TQDM)
-    # Frequency Data
-    compute_metric_frequencies(original_r, analysis_out)
+    dump_frequency(analysis_out, original_r)
     # PMetric Data
     add_consolidated_metrics(original_r)
     dump_consolidated_metrics(original_r, analysis_out)
