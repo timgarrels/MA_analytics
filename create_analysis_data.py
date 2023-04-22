@@ -119,17 +119,15 @@ def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path):
             for r_g in randomized_graph.swapped_graphs
         ]
 
-        with tqdm(
-            total=len(randomized_graph.swapped_graphs),
-            desc="Processing random graphs",
-            leave=False,
-        ) as pbar:
-            for _ in pool.starmap(
-                process_random_graph,
+        pool.starmap(
+            process_random_graph,
+            tqdm(
                 compare_args,
-                chunksize=25,
-            ):
-                pbar.update(1)
+                desc="Processing random graphs",
+                leave=False,
+            ),
+            chunksize=1,
+        )
 
 
 def dump_frequency(analysis_out: Path, r: ResultTransformer):
