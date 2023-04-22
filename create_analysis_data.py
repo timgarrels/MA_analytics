@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+from multiprocessing import Pool
 from pathlib import Path
 from statistics import median
 from typing import Dict
@@ -9,7 +10,7 @@ from typing import Dict
 import pandas as pd
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, get_graphlet_size_from_class
 from pmotif_lib.p_metric.metric_consolidation import metrics
-from pmotif_lib.p_motif_graph import PMotifGraphWithRandomization
+from pmotif_lib.p_motif_graph import PMotifGraphWithRandomization, PMotifGraph
 from pmotif_lib.result_transformer import ResultTransformer
 from scipy.stats import mannwhitneyu
 from tqdm import tqdm
@@ -18,6 +19,7 @@ ORIGINAL_MISSING_GRAPHLET_CLASS = "ORIGINAL_MISSING_GRAPHLET_CLASS"
 RANDOM_MISSING_GRAPHLET_CLASS = "RANDOM_MISSING_GRAPHLET_CLASS"
 
 SUPRESS_TQDM = True
+WORKERS = int(os.environ.get("WORKERS", 1))
 
 
 def add_consolidated_metrics(result: ResultTransformer) -> ResultTransformer:
@@ -89,28 +91,45 @@ def single_pairwise_result(original: ResultTransformer, random: ResultTransforme
     return data
 
 
-def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path, graphlet_size: int):
+def process_random_graph(analysis_out: Path, original_r: ResultTransformer, random_graph: PMotifGraph):
+    """Dump frequency and pairwise comparison with the original graph for the given random graph to disk."""
+    os.makedirs(analysis_out / random_graph.edgelist_path.name, exist_ok=True)
+    random_r = ResultTransformer.load_result(
+        random_graph.edgelist_path,
+        random_graph.output_directory,
+        original_r.graphlet_size,
+        supress_tqdm=SUPRESS_TQDM,
+    )
+    dump_frequency(analysis_out, random_r)
+    add_consolidated_metrics(random_r)
+    for metric_name in original_r.consolidated_metrics:
+        data = single_pairwise_result(original_r, random_r, metric_name)
+        with open(analysis_out / random_graph.edgelist_path.name / f"{metric_name}.data", "w", encoding="utf-8") as out:
+            json.dump(data, out)
+
+
+def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path):
     """Compare the original result with each random graph, sequentially per metric.
     Stores the result on disk, grouped by metric and random graph."""
-    # TODO: Parallelize? How to do IO?
     randomized_graph = PMotifGraphWithRandomization.create_from_pmotif_graph(original_r.pmotif_graph, -1)
 
-    for p_graph in tqdm(randomized_graph.swapped_graphs, desc="Processing random graphs: Pair-wise"):
-        os.makedirs(analysis_out / p_graph.edgelist_path.name, exist_ok=True)
+    with Pool(processes=WORKERS) as pool:
+        compare_args = [
+            (analysis_out, original_r, r_g)
+            for r_g in randomized_graph.swapped_graphs
+        ]
 
-        random_r = ResultTransformer.load_result(
-            p_graph.edgelist_path,
-            p_graph.output_directory,
-            graphlet_size,
-            supress_tqdm=SUPRESS_TQDM,
-        )
-        dump_frequency(analysis_out, random_r)
-        add_consolidated_metrics(random_r)
-
-        for metric_name in original_r.consolidated_metrics:
-            data = single_pairwise_result(original_r, random_r, metric_name)
-            with open(analysis_out / p_graph.edgelist_path.name / f"{metric_name}.data", "w", encoding="utf-8") as out:
-                json.dump(data, out)
+        with tqdm(
+            total=len(randomized_graph.swapped_graphs),
+            desc="Processing random graphs",
+            leave=False,
+        ) as pbar:
+            for _ in pool.starmap(
+                process_random_graph,
+                compare_args,
+                chunksize=25,
+            ):
+                pbar.update(1)
 
 
 def dump_frequency(analysis_out: Path, r: ResultTransformer):
@@ -154,7 +173,7 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
     dump_consolidated_metrics(original_r, analysis_out)
     dump_graphlet_occurrences(original_r, analysis_out)
 
-    compute_pairwise_results(original_r, analysis_out, graphlet_size)
+    compute_pairwise_results(original_r, analysis_out)
 
 
 if __name__ == "__main__":
