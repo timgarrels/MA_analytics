@@ -1,5 +1,6 @@
 """Generate analysis artifacts from raw analysis data."""
 import argparse
+import json
 import os
 from pathlib import Path
 
@@ -22,10 +23,23 @@ def run_global_analysis(analysis_data: Path, global_out: Path, graphlet_size: in
     analyse_relevance(global_out, random_graphs, graphlet_size)
 
 
+def dump_meta(analysis_out: Path, edgelist: Path, graphlet_size: int):
+    with open(analysis_out / "meta.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "edgelist": edgelist.name,
+            "graphlet_size": graphlet_size,
+        }, f)
+
+
+
 def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
     """Create analysis artifacts and report."""
     analysis_data = analysis_out / edgelist.name / "raw" / str(graphlet_size)
     analysis_out = analysis_out / edgelist.name / "artifacts" / str(graphlet_size)
+    os.makedirs(analysis_out, exist_ok=True)
+
+    dump_meta(analysis_out, edgelist, graphlet_size)
+
     original = analysis_data / edgelist.name
 
     local_out = analysis_out / "local"
