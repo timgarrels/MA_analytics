@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+    <title>(p)Motif Detection Report for {{ graph_name }}, {{ graphlet_size }}</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    function metricChanged() {
+        [...document.querySelectorAll('.metric')].forEach(e => {
+            e.style.display = "none";
+        })
+
+        let chosenMetric = document.getElementById("metricSelector").value;
+        [...document.querySelectorAll('.' + chosenMetric)].forEach(e => {
+            e.style.display = "initial";
+        })
+    }
+
+    // Motif Inputs
+    function getMotifThreshold() {
+        return document.getElementById("motif-threshold").value;
+    }
+    function motifThresholdChanged() {
+        document.getElementById("motif-threshold-display").innerHTML = getMotifThreshold();
+
+        [...document.querySelectorAll('.motif-card')].forEach(e => {
+            let zScore = parseFloat(e.querySelector('.z-score-value').innerHTML);
+            // compare to threshold
+            let isMotif = zScore > getMotifThreshold();
+            // enable/disable badge pill
+            let motifBadge = e.querySelector('.motif-highlight');
+            motifBadge.style.display = isMotif ? "initial" : "none";
+        })
+    }
+
+    function getAntiMotifThreshold() {
+        return document.getElementById("anti-motif-threshold").value;
+    }
+    function antiMotifThresholdChanged() {
+        document.getElementById("anti-motif-threshold-display").innerHTML = getAntiMotifThreshold();
+
+        [...document.querySelectorAll('.motif-card')].forEach(e => {
+            let zScore = parseFloat(e.querySelector('.z-score-value').innerHTML);
+            // compare to threshold
+            let isAntiMotif = zScore < getAntiMotifThreshold();
+            // enable/disable badge pill
+            let motifBadge = e.querySelector('.anti-motif-highlight');
+            motifBadge.style.display = isAntiMotif ? "initial" : "none";
+        })
+    }
+
+    // PMotif Inputs
+    function getPValue() {
+        return document.getElementById("p-value-threshold").value;
+    }
+    function pValueThresholdChanged() {
+        document.getElementById("p-value-threshold-display").innerHTML = getPValue();
+
+
+        [...document.querySelectorAll('.p-motif-card')].forEach(e => {
+            let totalGraphs = parseInt(e.querySelector('.total-graphs').innerHTML);
+            let localAlpha = (parseFloat(getPValue()) / totalGraphs).toFixed(5)
+            e.querySelector('.local-alpha').innerHTML = localAlpha;
+
+            let pValues = JSON.parse(e.querySelector('.p-values').innerHTML);
+            let pValuesRelevant = pValues.filter((p) => parseFloat(p) < localAlpha);
+            e.querySelector('.significant-p-values').innerHTML = pValuesRelevant.length + " out of " + pValues.length + " Random Graphs are significant!";
+            let percentage = (pValuesRelevant.length / pValues.length).toFixed(2);
+            e.querySelector('.significant-percent').innerHTML = percentage * 100 + "%";
+        })
+        updatePMotifLabel();
+    }
+
+    function getSignificanceThreshold() {
+        return document.getElementById("significance-threshold").value;
+    }
+    function significanceThresholdChanged() {
+        document.getElementById("significance-threshold-display").innerHTML = getSignificanceThreshold() + "%";
+        updatePMotifLabel();
+    }
+    function updatePMotifLabel() {
+        [...document.querySelectorAll('.p-motif-card')].forEach(e => {
+            let percentage = parseInt(e.querySelector('.significant-percent').innerHTML.replace("%", ""));
+            let isPMotif = percentage > getSignificanceThreshold();
+            let pMotifBadge = e.querySelector('.p-motif-label');
+            pMotifBadge.style.display = isPMotif ? "initial" : "none";
+        })
+    }
+
+    function resetUserInputs() {
+        document.getElementById("motif-threshold").value = 2.5;
+        document.getElementById("anti-motif-threshold").value = -2.5;
+        document.getElementById("p-value-threshold").value = 0.05;
+        document.getElementById("significance-threshold").value = 60;
+    }
+
+    window.onload = function () {
+        resetUserInputs();
+
+        metricChanged();
+        motifThresholdChanged();
+        antiMotifThresholdChanged();
+        pValueThresholdChanged();
+        significanceThresholdChanged();
+    };
+</script>
+</head>
+<body>
+<div class="container-fluid m-3">
+    <h1>{{ graph_name }}</h1>
+    <div class="d-flex justify-content-left">
+    <span class="badge rounded-pill text-bg-primary">
+    Graphlet Size <span class="badge rounded-pill bg-secondary">{{ graphlet_size }}</span>
+    </span>
+
+    <label for="metricSelector"></label>
+    <select id="metricSelector" onChange="metricChanged()">
+        {% for m in metric_names %}
+            <option name={{ m }} value={{ m.replace(" ", "_") }}
+                    selected="{{ True if loop.index0 == 0 else False }}">{{ m }}</option>
+        {% endfor %}
+    </select>
+    </div>
+</div>
+
+<div class="container-fluid m-3" id="local">
+    <h3>Local Scope</h3>
+    <p>
+        This Scope allows to compare the graphlets in <i>G</i> with each other. Common insights are the counts of
+        graphlets per class
+        and the distribution of positional metrics within each graphlet class.
+    </p>
+        <div class="card m-3" style="min-width: 500px; max-width: 30%">
+            <div class="card-body">
+                <h5 class="card-title">Pie Chart of the Graphlet Class Frequencies</h5>
+                <img class="card-img-bottom" src="{{ graphlet_pie }}" alt="Pie Chart of the Graphlet Class Frequencies">
+            </div>
+        </div>
+
+    <h4>Graphlet p-Metric Distributions</h4>
+    {% for m in metric_names %}
+        <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
+            <div class="row m-3 card-deck">
+                {% for graphlet_class in graphlet_classes %}
+                    <div class="card card-block m-2 col-sm-3" style="min-width: 500px;" >
+                        <div class="card-body">
+                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}</h5>
+                            <img class="card-img-bottom" src="{{ local_out / m / graphlet_class_to_name(graphlet_class) }}.png" alt="Card image cap">
+                            {% if not has_outlier_file(local_out, m, graphlet_class) %}
+                                <div class="alert alert-danger" role="alert">
+                                    The graph {{ graph_name }} did not contain occurrences of {{ graphlet_class_to_name(graphlet_class) }}! Therefor this plot is empty!
+                                </div>
+                            {% else %}
+                                <div>
+                                    <table class="card-table table table-sm">
+                                        <tbody>
+                                            {% for percent, data in get_outlier_data(local_out, m, graphlet_class).items() %}
+                                                <tr>
+                                                    <td>{{ percent }}</td>
+                                                    <td>
+                                                        <span class="badge rounded-pill text-bg-primary">
+                                                            Occurrence Count <span class="badge rounded-pill bg-secondary">{{ data["occurrence_count"] }}</span>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge rounded-pill text-bg-primary">
+                                                            Cut Value <span class="badge rounded-pill bg-secondary">{{ data["cut_value"] }}</span>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+
+                                                            <textarea title="Individual Occurrences" rows="1" cols="10">{{ data["occurrences"] }}</textarea>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                      </tbody>
+                                    </table>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="container-fluid m-3" id="global">
+    <h3>Global Scope</h3>
+    <p>
+        This Scope allows to compare the graphlets in G with graphlets of a randomized version of G. Common insights are whether a specific graphlet class is a motif or a p-motif.
+    </p>
+    <h4>Graphlet Frequency Distributions</h4>
+    <div>
+        <form>
+            <div class="mb-3">
+                <label for="motif-threshold" class="form-label">Z-Score Threshold for Motif</label>
+                <span class="badge rounded-pill text-bg-info" id="motif-threshold-display">Value</span>
+                <br>
+                <input type="range" class="form-range w-25" min="0" max="10" step="0.5" value="2.5" id="motif-threshold" oninput="motifThresholdChanged()">
+            </div>
+            <div class="mb-3">
+                <label for="anti-motif-threshold" class="form-label">Z-Score Threshold for Anti-Motif</label>
+                <span class="badge rounded-pill text-bg-info" id="anti-motif-threshold-display">Value</span>
+                <br>
+                <input type="range" class="form-range w-25" min="-10" max="0" step="0.5" value="-2.5" id="anti-motif-threshold" oninput="antiMotifThresholdChanged()">
+            </div>
+        </form>
+    </div>
+    <div class="row m-3 card-deck">
+    {% for graphlet_class in graphlet_classes %}
+        <div class="card card-block m-2 col-sm-3 motif-card" style="min-width: 500px;" >
+            <div class="card-body">
+                <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}
+                    <span class="badge rounded-pill text-bg-success motif-highlight" style="display: none">Motif</span>
+                    <span class="badge rounded-pill text-bg-success anti-motif-highlight" style="display: none">Anti-Motif</span>
+                </h5>
+                <img class="card-img-bottom" src="{{ global_out / graphlet_class_to_name(graphlet_class) }}_frequency.png" alt="Card image cap">
+                <div class="card-text">
+                    <span class="badge rounded-pill text-bg-primary">
+                        Total Random Graphs
+                        <span class="badge rounded-pill bg-secondary">
+                            {{ get_frequency_split(global_out, graphlet_class)["above"] + get_frequency_split(global_out, graphlet_class)["equal"] + get_frequency_split(global_out, graphlet_class)["below"] }}
+                        </span>
+                    </span>
+                    <br>
+                    Original Frequency:
+                    <span class="badge rounded-pill text-bg-primary">
+                        Above
+                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["above"] }}</span>
+                    </span>
+                    <span class="badge rounded-pill text-bg-primary">
+                        Equal
+                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["equal"] }}</span>
+                    </span>
+                    <span class="badge rounded-pill text-bg-primary">
+                        Below
+                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["below"] }}</span>
+                    </span>
+                    <br>
+                    <span class="badge rounded-pill text-bg-success">
+                        Z-Score
+                        <span class="badge rounded-pill bg-secondary z-score-value">{{ round(get_frequency_split(global_out, graphlet_class)["z-score"], 2) }}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    <h4>Graphlet p-Metric Distributions</h4>
+    <div>
+        <form>
+            <div class="mb-3">
+                <label for="p-value-threshold" class="form-label">Global Alpha PMotifs</label>
+                <span class="badge rounded-pill text-bg-info" id="p-value-threshold-display">Value</span>
+                <br>
+                <input type="range" class="form-range w-25" min="0.01" max="0.1" step="0.01" value="0.05" id="p-value-threshold" oninput="pValueThresholdChanged()">
+            </div>
+            <div class="mb-3">
+                <label for="significance-threshold" class="form-label">Significance Threshold</label>
+                <span class="badge rounded-pill text-bg-info" id="significance-threshold-display">Value</span>
+                <br>
+                <input type="range" class="form-range w-25" min="50" max="99" step="1" value="50" id="significance-threshold" oninput="significanceThresholdChanged()">
+            </div>
+        </form>
+    </div>
+
+    {% for m in metric_names %}
+        <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
+            <div class="row m-3 card-deck">
+                {% for graphlet_class in graphlet_classes %}
+                    <div class="card card-block m-2 col-sm-3 p-motif-card" style="min-width: 500px;" >
+                        <div class="card-body">
+                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label">pMotif</span></h5>
+                            {% if not get_relevancy_data(global_out, m, graphlet_class)["error"] %}
+                                <img class="card-img-bottom" src="{{ global_out / m / graphlet_class_to_name(graphlet_class) }}_sample_median.png" alt="Card image cap">
+
+                                {% if get_relevancy_data(global_out, m, graphlet_class)["real_total"] == get_relevancy_data(global_out, m, graphlet_class)["total"] %}
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_relevancy_data(global_out, m, graphlet_class)["total"] }}</span>
+                                    </span>
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                    </span>
+                                {% else %}
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_relevancy_data(global_out, m, graphlet_class)["real_total"] }}</span>
+                                    </span>
+
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                    </span>
+                                    <div class="alert alert-warning" role="alert">
+                                    A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
+                                        (Skipped:
+                                        <span class="badge rounded-pill bg-secondary">
+                                        {{ get_relevancy_data(global_out, m, graphlet_class)["total"] - get_relevancy_data(global_out, m, graphlet_class)["real_total"] }}
+                                        </span>
+                                            )
+                                    </div>
+                                {% endif %}
+
+                            {% else %}
+                                <div class="alert alert-danger" role="alert">
+                                    The original graph is missing this particular graph class! No comparison possible!
+                                </div>
+                            {% endif %}
+                            <br>
+                            <div class="significant-p-values">Count out of Total Random Graphs are significant!</div>
+                            <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
+                            <form style="display: none">
+                                <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
+                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values" style="display: none">{{ get_relevancy_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -6,6 +6,7 @@ from pathlib import Path
 
 import report_creation.local_analysis as local_analysis
 from report_creation.global_analysis import analyse_relevance, get_random_graph_paths, plot_frequency_histogram
+from report_creation.jinja_render import create_report
 
 
 def run_local_analysis(analysis_out, original):
@@ -31,7 +32,6 @@ def dump_meta(analysis_out: Path, edgelist: Path, graphlet_size: int):
         }, f)
 
 
-
 def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
     """Create analysis artifacts and report."""
     analysis_data = analysis_out / edgelist.name / "raw" / str(graphlet_size)
@@ -50,7 +50,7 @@ def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
     os.makedirs(global_out, exist_ok=True)
     run_global_analysis(analysis_data, global_out, graphlet_size, original)
 
-    # TODO: Create report
+    create_report(analysis_out, local_out, global_out, analysis_out / "report.html")
 
 
 if __name__ == "__main__":
