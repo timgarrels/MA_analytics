@@ -76,7 +76,7 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
 
         equal, above, below = split_equal_above_below(highlight, frequencies)
         with open(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency_split.json", "w", encoding="utf-8") as f:
-            json.dump({"equal": equal, "above": above, "below": below}, f)
+            json.dump({"equal": equal, "above": above, "below": below, "z-score": z_score}, f)
 
 
 def get_metrics(random_graph: Path) -> List[str]:
