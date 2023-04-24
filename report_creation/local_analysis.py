@@ -22,6 +22,7 @@ def graphlet_pie_chart(frequency_data: Dict[str, int], analysis_out: Path):
     labels = [graphlet_class_to_name(graphlet_class) for graphlet_class in frequency_data.keys()]
     ax.pie(frequency_data.values(), labels=labels)
     ax.set_title("Distribution of Graphlet Classes in the original graph.")
+    ax.legend()
 
     fig.savefig(analysis_out / "graphlet_pie.png")
     fig.savefig(analysis_out / "graphlet_pie.pdf")
@@ -61,8 +62,11 @@ def outlier_detection(original: Path, analysis_out: Path):
         os.makedirs(out, exist_ok=True)
         for graphlet_class, metric_values in graphlet_class_to_metrics.items():
             occurrence_metric_pairs: List[Tuple[List[str], float]] = list(zip(occurrences[graphlet_class], metric_values))
+            if len(occurrence_metric_pairs) == 0:
+                continue
+
             percentile_cuts = get_percentile_cuts(occurrence_metric_pairs)
-            with open(out / "outliers.json", "w", encoding="utf-8") as outliers:
+            with open(out / f"{graphlet_class_to_name(graphlet_class)}_outliers.json", "w", encoding="utf-8") as outliers:
                 json.dump(percentile_cuts, outliers)
 
 
