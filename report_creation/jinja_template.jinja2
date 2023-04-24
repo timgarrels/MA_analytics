@@ -310,7 +310,7 @@
                             <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
                             <form style="display: none">
                                 <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
-                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values" style="display: none">{{ get_relevancy_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
+                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_relevancy_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
                             </form>
                         </div>
                     </div>
