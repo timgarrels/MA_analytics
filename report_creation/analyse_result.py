@@ -56,9 +56,9 @@ def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--analysis_out", required=True, type=Path)
-    parser.add_argument("--edgelist_path", required=True, type=Path)
+    parser.add_argument("--edgelist_name", required=True, type=Path)
     parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
 
     args = parser.parse_args()
 
-    main(args.analysis_out, args.edgelist_path, args.graphlet_size)
+    main(args.analysis_out, args.edgelist_name, args.graphlet_size)
