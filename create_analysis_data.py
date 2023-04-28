@@ -19,7 +19,11 @@ ORIGINAL_MISSING_GRAPHLET_CLASS = "ORIGINAL_MISSING_GRAPHLET_CLASS"
 RANDOM_MISSING_GRAPHLET_CLASS = "RANDOM_MISSING_GRAPHLET_CLASS"
 
 SUPRESS_TQDM = True
-WORKERS = int(os.environ.get("WORKERS", 1))
+
+DATASET_DIRECTORY = Path(os.getenv("DATASET_DIRECTORY"))
+EXPERIMENT_OUT = Path(os.getenv("EXPERIMENT_OUT"))
+
+WORKERS = int(os.getenv("WORKERS", default="1"))
 
 
 def add_consolidated_metrics(result: ResultTransformer) -> ResultTransformer:
@@ -155,13 +159,13 @@ def dump_graphlet_occurrences(r: ResultTransformer, analysis_out: Path):
         json.dump(dict(occurrences), out)
 
 
-def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int, graphlet_data: Path):
+def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int):
     """Calculate frequency data and (consolidated) pmetric data and store to disk for later use."""
     analysis_out = analysis_out / edgelist.name
     analysis_out = analysis_out / "raw" / str(graphlet_size)
     os.makedirs(analysis_out, exist_ok=True)
 
-    graphlet_data = graphlet_data / edgelist.stem
+    graphlet_data = EXPERIMENT_OUT / edgelist.stem
 
     original_r = ResultTransformer.load_result(edgelist, graphlet_data, graphlet_size, supress_tqdm=SUPRESS_TQDM)
     dump_frequency(analysis_out, original_r)
@@ -176,9 +180,8 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--analysis_out", required=True, type=Path)
-    parser.add_argument("--edgelist_path", required=True, type=Path)
+    parser.add_argument("--edgelist_name", required=True, type=Path)
     parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
-    parser.add_argument("--graphlet_data", required=True, type=Path)
 
     args = parser.parse_args()
-    create_analysis_data(args.analysis_out, args.edgelist_path, args.graphlet_size, args.graphlet_data)
+    create_analysis_data(args.analysis_out, DATASET_DIRECTORY / args.edgelist_name, args.graphlet_size)
