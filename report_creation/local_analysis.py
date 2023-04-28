@@ -87,12 +87,12 @@ def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]])
             "occurrences": []
         },
         ">95%": {
-            "cut_value": round(percentile_cuts[-1], 2),
+            "cut_value": round(percentile_cuts[-5], 2),
             "occurrence_count": 0,
             "occurrences": []
         },
         ">99%": {
-            "cut_value": round(percentile_cuts[-5], 2),
+            "cut_value": round(percentile_cuts[-1], 2),
             "occurrence_count": 0,
             "occurrences": []
         },
