@@ -1,6 +1,6 @@
 import json
 import os
-from functools import cache
+from functools import lru_cache
 from pathlib import Path
 from statistics import quantiles
 from typing import Dict, List, Tuple
@@ -10,7 +10,7 @@ from pmotif_lib.graphlet_representation import graphlet_class_to_name
 from tqdm import tqdm
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_frequency_data(p: Path):
     """Load the graphlet class -> occurrence count lookup."""
     with open(p / "frequency", "r", encoding="utf-8") as frequency:
@@ -115,7 +115,7 @@ def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]])
     return cuts
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_graphlet_occurrences(original: Path) -> Dict[str, List[List[int]]]:
     """Load all avaiable metrics from disk, return as a lookup
     metric_name -> graphlet_class -> values"""
@@ -126,7 +126,7 @@ def get_graphlet_occurrences(original: Path) -> Dict[str, List[List[int]]]:
         return json.load(occurrences_file)
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_metrics(original: Path) -> Dict[str, Dict[str, List[float]]]:
     """Load all available metrics from disk, return as a lookup
     metric_name -> graphlet_class -> values"""

@@ -1,6 +1,6 @@
 import json
 import os
-from functools import cache
+from functools import lru_cache
 from pathlib import Path
 from typing import Dict
 
@@ -13,7 +13,7 @@ def get_meta(analysis_out: Path) -> Dict:
         return json.load(f)
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_frequency_split(global_out: Path, graphlet_class: str) -> Dict:
     with open(global_out / f"{graphlet_class_to_name(graphlet_class)}_frequency_split.json", "r", encoding="utf-8") as f:
         return json.load(f)
@@ -23,14 +23,14 @@ def has_outlier_file(local_out: Path, metric: str, graphlet_class: str) -> bool:
     return (local_out / metric / f"{graphlet_class_to_name(graphlet_class)}_outliers.json").is_file()
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_outlier_data(local_out: Path, metric: str, graphlet_class: str) -> Dict:
     outlier_file = local_out / metric / f"{graphlet_class_to_name(graphlet_class)}_outliers.json"
     with open(outlier_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-@cache
+@lru_cache(maxsize=None)
 def get_relevancy_data(global_out: Path, metric: str, graphlet_class: str) -> Dict:
     relevancy_file = global_out / metric / f"{graphlet_class_to_name(graphlet_class)}_relevance.json"
     with open(relevancy_file, "r", encoding="utf-8") as f:
