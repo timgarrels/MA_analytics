@@ -7,6 +7,7 @@ from typing import Dict, List, Tuple
 
 from matplotlib import pyplot as plt
 from pmotif_lib.graphlet_representation import graphlet_class_to_name
+from tqdm import tqdm
 
 
 @cache
@@ -34,7 +35,7 @@ def metric_distribution(original: Path, analysis_out: Path):
     if "random" in str(original):
         raise ValueError("Only call this on the original graph compute!")
     metrics = get_metrics(original)
-    for metric_name, graphlet_class_to_metrics in metrics.items():
+    for metric_name, graphlet_class_to_metrics in tqdm(metrics.items(), desc="Processing metric distribution"):
         os.makedirs(analysis_out / metric_name, exist_ok=True)
         for graphlet_class, metric_values in graphlet_class_to_metrics.items():
             fig, ax = plt.subplots()
@@ -57,7 +58,7 @@ def outlier_detection(original: Path, analysis_out: Path):
 
     occurrences = get_graphlet_occurrences(original)
     metrics = get_metrics(original)
-    for metric_name, graphlet_class_to_metrics in metrics.items():
+    for metric_name, graphlet_class_to_metrics in tqdm(metrics.items(), desc="Processing outlier detection"):
         out = analysis_out / metric_name
         os.makedirs(out, exist_ok=True)
         for graphlet_class, metric_values in graphlet_class_to_metrics.items():

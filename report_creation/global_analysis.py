@@ -7,6 +7,7 @@ import re
 import matplotlib.pyplot as plt
 import json
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
+from tqdm import tqdm
 
 from report_creation.util import get_frequency_data, get_zscore
 
@@ -46,14 +47,14 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
     Highlight the count of graphlet occurrences in the original graph."""
     graphlet_classes = graphlet_classes_from_size(graphlet_size)
     global_frequencies: Dict[str, List[int]] = defaultdict(list)
-    for random_graph in random_graphs:
+    for random_graph in tqdm(random_graphs, desc="Collecting Frequency Data"):
         frequency = get_frequency_data(random_graph)
         for graphlet_class in graphlet_classes:
             global_frequencies[graphlet_class].append(frequency.get(graphlet_class, 0))
         del frequency
 
     original_frequency = get_frequency_data(original)
-    for graphlet_class, frequencies in global_frequencies.items():
+    for graphlet_class, frequencies in tqdm(global_frequencies.items(), leave=False, desc="Plotting frequency data"):
         highlight = original_frequency[graphlet_class]
         z_score = get_zscore(highlight, frequencies)
 
@@ -97,9 +98,9 @@ def analyse_relevance(analysis_out: Path, random_graphs: List[Path], graphlet_si
     graphlet_classes = graphlet_classes_from_size(graphlet_size)
     metric_names = get_metrics(random_graphs[0])
 
-    for metric_name in metric_names:
+    for metric_name in tqdm(metric_names, desc="Analysing Metric Relevance"):
         os.makedirs(analysis_out / metric_name, exist_ok=True)
-        for graphlet_class in graphlet_classes:
+        for graphlet_class in tqdm(graphlet_classes, leave=False, desc="Graphlet Class Progress"):
             relevancy_out = analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_relevance.json"
             try:
                 original_median, p_values, sample_median = extract_pairwise_data(

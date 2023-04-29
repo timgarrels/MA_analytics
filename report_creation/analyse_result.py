@@ -11,6 +11,7 @@ from report_creation.jinja_render import create_report
 
 def run_local_analysis(analysis_out, original):
     """Produce artifacts for the local (un-randomized) scope."""
+    print("\nLocal Analysis\n")
     original_frequency = local_analysis.get_frequency_data(original)
     local_analysis.graphlet_pie_chart(original_frequency, analysis_out)
     local_analysis.metric_distribution(original, analysis_out)
@@ -19,6 +20,7 @@ def run_local_analysis(analysis_out, original):
 
 def run_global_analysis(analysis_data: Path, global_out: Path, graphlet_size: int, original: Path):
     """Produce artifacts for the global (randomized) scope."""
+    print("\nGlobal Analysis\n")
     random_graphs = get_random_graph_paths(analysis_data)
     plot_frequency_histogram(global_out, original, random_graphs, graphlet_size)
     analyse_relevance(global_out, random_graphs, graphlet_size)
@@ -30,6 +32,11 @@ def dump_meta(analysis_out: Path, edgelist: Path, graphlet_size: int):
             "edgelist": edgelist.name,
             "graphlet_size": graphlet_size,
         }, f)
+
+
+def _create_report(analysis_out: Path, local_out: Path, global_out: Path, report_out: Path):
+    print("\nReport Creation\n")
+    create_report(analysis_out, local_out, global_out, report_out)
 
 
 def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
@@ -50,7 +57,7 @@ def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
     os.makedirs(global_out, exist_ok=True)
     run_global_analysis(analysis_data, global_out, graphlet_size, original)
 
-    create_report(analysis_out, local_out, global_out, analysis_out / "report.html")
+    _create_report(analysis_out, local_out, global_out, analysis_out / "report.html")
 
 
 if __name__ == "__main__":
