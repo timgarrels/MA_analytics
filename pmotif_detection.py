@@ -39,6 +39,7 @@ def process_graph(
     graphlet_size: int,
     metrics: List[PMetric.PMetric],
     check_validity: bool = True,
+    with_weights: bool = False,
 ):
     """Run a graphlet detection and metric calculation (if any) on the given graph."""
     if check_validity:
@@ -50,6 +51,7 @@ def process_graph(
         directed=False,
         graphlet_size=graphlet_size,
         output_directory=pmotif_graph.get_graphlet_directory(),
+        with_weights=with_weights,
     )
 
     if len(metrics) == 0:
@@ -67,10 +69,19 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
 
     pmotif_graph = PMotifGraph(edgelist, out)
 
+    with open(edgelist, "r", encoding="utf-8") as f:
+        l = f.readline()
+        parts = l.split(" ")
+        if len(parts) == 3:
+            with_weights = True
+        else:
+            with_weights = False
+
     process_graph(
         pmotif_graph,
         graphlet_size,
         [degree, anchor_node, graph_module_participation],
+        with_weights=with_weights,
     )
 
     randomized_pmotif_graph = PMotifGraphWithRandomization.create_from_pmotif_graph(
