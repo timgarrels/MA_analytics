@@ -2,18 +2,15 @@
 LOGS=$1
 EDGELIST_NAME=$2
 GRAPHLET_SIZE=$3
-WORKERS=$4
 
 mkdir -p $LOGS
 
 source run.env
 
-SCRIPT=$MA_ANALYTICS/create_analysis_data.py
-
-source ./pmotif_lib.env
+cd $MA_ANALYTICS
 
 date >> $LOGS/start_time
-$PYTHON_EXEC $SCRIPT \
+$PYTHON_EXEC -m report_creation.analyse_result \
     --analysis_out $OUTPUT_BASE/analysis_out \
     --edgelist_name $EDGELIST_NAME \
     --graphlet_size $GRAPHLET_SIZE \
