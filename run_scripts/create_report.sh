@@ -13,7 +13,7 @@ cd $MA_ANALYTICS
 # Run
 date >> $LOG_OUT/start_time
 $PYTHON_EXEC -m report_creation.analyse_result \
-    --analysis_out $EXPERIMENT_OUT/analysis_out \
+    --analysis_out $OUT_BASE/analysis_out \
     --edgelist_name $EDGELIST_NAME \
     --graphlet_size $GRAPHLET_SIZE \
     2> $LOG_OUT/err.log 1> $LOG_OUT/std.log
