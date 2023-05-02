@@ -127,13 +127,13 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     GRAPH_EDGELIST = DATASET_DIRECTORY / args.edgelist_name
-    OUT = EXPERIMENT_OUT / "benchmarking" / "out" / GRAPH_EDGELIST.stem
     GRAPHLET_SIZE = args.graphlet_size
     RANDOM_GRAPHS = args.random_graphs
     BENCHMARKING_RUN = args.benchmarking_run
+    OUT = EXPERIMENT_OUT / f"bench_{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}"
 
     makedirs(OUT, exist_ok=True)
-    logs_out = EXPERIMENT_OUT / "benchmarking" / "benchmarking_logs"
+    logs_out = OUT
     makedirs(logs_out, exist_ok=True)
 
     logfile = f"{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}_{GRAPHLET_SIZE}_{RANDOM_GRAPHS}.benchmark"
@@ -151,4 +151,3 @@ if __name__ == "__main__":
     main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, RANDOM_GRAPHS)
     total_runtime = time.time() - total_runtime_start
     logger.info("Total Runtime: %s", total_runtime)
-    shutil.rmtree(EXPERIMENT_OUT / "benchmarking" / "out")
