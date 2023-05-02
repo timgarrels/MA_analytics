@@ -6,7 +6,7 @@ BENCHMARK_RUN=$4
 
 source run.env
 # Setup logging
-LOG_OUT=$LOG_BASE/pmotif_detection_benchmark/$EDGELIST_NAME/$GRAPHLET_SIZE
+LOG_OUT=$LOG_BASE/pmotif_detection_benchmark_$BENCHMARK_RUN/$EDGELIST_NAME/$GRAPHLET_SIZE
 mkdir -p $LOG_OUT
 
 
