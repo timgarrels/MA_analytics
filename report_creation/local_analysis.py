@@ -68,7 +68,7 @@ def outlier_detection(original: Path, analysis_out: Path):
 
             percentile_cuts = get_percentile_cuts(occurrence_metric_pairs)
             with open(out / f"{graphlet_class_to_name(graphlet_class)}_outliers.json", "w", encoding="utf-8") as outliers:
-                json.dump(percentile_cuts, outliers)
+                json.dump(percentile_cuts, outliers, indent=4)
 
 
 def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]]):

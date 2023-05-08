@@ -272,19 +272,19 @@
                     <div class="card card-block m-2 col-sm-3 p-motif-card" style="min-width: 500px;" >
                         <div class="card-body">
                             <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label">pMotif</span></h5>
-                            {% if not get_relevancy_data(global_out, m, graphlet_class)["error"] %}
+                            {% if not get_pairwise_data(global_out, m, graphlet_class)["error"] %}
                                 <img class="card-img-bottom" src="{{ global_out / m / graphlet_class_to_name(graphlet_class) }}_sample_median.png" alt="Card image cap">
 
-                                {% if get_relevancy_data(global_out, m, graphlet_class)["real_total"] == get_relevancy_data(global_out, m, graphlet_class)["total"] %}
+                                {% if get_pairwise_data(global_out, m, graphlet_class)["real_total"] == get_pairwise_data(global_out, m, graphlet_class)["total"] %}
                                     <span class="badge rounded-pill text-bg-primary">
-                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_relevancy_data(global_out, m, graphlet_class)["total"] }}</span>
+                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["total"] }}</span>
                                     </span>
                                     <span class="badge rounded-pill text-bg-primary">
                                         Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
                                     </span>
                                 {% else %}
                                     <span class="badge rounded-pill text-bg-primary">
-                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_relevancy_data(global_out, m, graphlet_class)["real_total"] }}</span>
+                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}</span>
                                     </span>
 
                                     <span class="badge rounded-pill text-bg-primary">
@@ -294,7 +294,7 @@
                                     A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
                                         (Skipped:
                                         <span class="badge rounded-pill bg-secondary">
-                                        {{ get_relevancy_data(global_out, m, graphlet_class)["total"] - get_relevancy_data(global_out, m, graphlet_class)["real_total"] }}
+                                        {{ get_pairwise_data(global_out, m, graphlet_class)["total"] - get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}
                                         </span>
                                             )
                                     </div>
@@ -310,7 +310,7 @@
                             <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
                             <form style="display: none">
                                 <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
-                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_relevancy_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
+                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_pairwise_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
                             </form>
                         </div>
                     </div>

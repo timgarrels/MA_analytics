@@ -31,7 +31,7 @@ def dump_meta(analysis_out: Path, edgelist: Path, graphlet_size: int):
         json.dump({
             "edgelist": edgelist.name,
             "graphlet_size": graphlet_size,
-        }, f)
+        }, f, indent=4)
 
 
 def _create_report(analysis_out: Path, local_out: Path, global_out: Path, report_out: Path):

@@ -1,6 +1,8 @@
+import math
 import os
 from collections import defaultdict
 from pathlib import Path
+from statistics import median, mean
 from typing import List, Tuple, Dict, Union
 import re
 
@@ -77,7 +79,7 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
 
         equal, above, below = split_equal_above_below(highlight, frequencies)
         with open(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency_split.json", "w", encoding="utf-8") as f:
-            json.dump({"equal": equal, "above": above, "below": below, "z-score": z_score}, f)
+            json.dump({"equal": equal, "above": above, "below": below, "z-score": z_score}, f, indent=4)
 
 
 def get_metrics(random_graph: Path) -> List[str]:
@@ -101,30 +103,60 @@ def analyse_relevance(analysis_out: Path, random_graphs: List[Path], graphlet_si
     for metric_name in tqdm(metric_names, desc="Analysing Metric Relevance"):
         os.makedirs(analysis_out / metric_name, exist_ok=True)
         for graphlet_class in tqdm(graphlet_classes, leave=False, desc="Graphlet Class Progress"):
-            relevancy_out = analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_relevance.json"
+            relevancy_out = analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_pairwise.json"
             try:
-                original_median, p_values, sample_median = extract_pairwise_data(
+                pair_wise_data = extract_pairwise_data(
                     graphlet_class,
                     metric_name,
                     random_graphs,
                 )
+                original_median = pair_wise_data["original_median"]
+                sample_median = pair_wise_data["sample_median"]
                 plot_sample_median(analysis_out, metric_name, original_median, sample_median, graphlet_class)
             except ValueError:
-                dump_relevancy_json(relevancy_out, [], len(random_graphs), error=ORIGINAL_MISSING_GRAPHLET_CLASS)
+                dump_pairwise_data(relevancy_out, {}, len(random_graphs), error=ORIGINAL_MISSING_GRAPHLET_CLASS)
                 continue
 
-            dump_relevancy_json(relevancy_out, p_values, len(random_graphs), error=None)
+            dump_pairwise_data(relevancy_out, pair_wise_data, len(random_graphs), error=None)
 
 
-def dump_relevancy_json(out: Path, p_values: List[float], total: int, error: Union[str, None]):
+def dump_pairwise_data(out: Path, pair_wise_data: Dict[str, Union[float, List[float]]], total: int, error: Union[str, None]):
     """Create a json file logging data important for p-motif relevance analysis."""
+    p_values = pair_wise_data.get("p_values", [])
+    corr_coef = pair_wise_data.get("correlation_coefficients", [])
+    if len(corr_coef) == 0:
+        mean_corr_coef = None,
+        median_corr_coef = None
+    else:
+        mean_corr_coef = mean(corr_coef)
+        median_corr_coef = median(corr_coef)
+
+    # MAD
+    abs_deviations = [pair_wise_data["original_median"] - sample_median for sample_median in pair_wise_data["sample_median"]]
+    abs_mean_average_deviation = mean(abs_deviations)
+    abs_median_average_deviation = median(abs_deviations)
+
+    try:
+        rel_deviations = [pair_wise_data["original_median"] / sample_median for sample_median in pair_wise_data["sample_median"]]
+        rel_mean_average_deviation = mean(rel_deviations)
+        rel_median_average_deviation = median(rel_deviations)
+    except ZeroDivisionError:
+        rel_mean_average_deviation = None
+        rel_median_average_deviation = None
+
     with open(out, "w", encoding="utf-8") as f:
         json.dump({
             "error": error,
             "p-values": p_values,
+            "mean_corr_coef": mean_corr_coef,
+            "median_corr_coef": median_corr_coef,
+            "abs_mean_average_deviation": abs_mean_average_deviation,
+            "abs_median_average_deviation": abs_median_average_deviation,
+            "rel_mean_average_deviation": rel_mean_average_deviation,
+            "rel_median_average_deviation": rel_median_average_deviation,
             "total": len(p_values),
             "real_total": total,
-        }, f)
+        }, f, indent=4)
 
 
 def plot_sample_median(
@@ -156,7 +188,7 @@ def plot_sample_median(
 
 def extract_pairwise_data(
         graphlet_class: str, metric_name: str, random_graphs: List[Path],
-) -> Tuple[float, List[float], List[float]]:
+) -> Dict[str, Union[float, List[float]]]:
     """Extract the original median, the p-values, and the medians of all random graphs for a given metrics for the
     pairwise comparision data and return.
     Raises a ValueError if the original graph did not contain the specified graphlet class.
@@ -165,6 +197,7 @@ def extract_pairwise_data(
     original_median = None
     p_values = []
     sample_median = []
+    correlation_coefficients = []
     for r_g in random_graphs:
         data = load_pairwise_data(r_g, metric_name)
         if data[graphlet_class] == ORIGINAL_MISSING_GRAPHLET_CLASS:
@@ -178,7 +211,25 @@ def extract_pairwise_data(
         sample_median.append(data[graphlet_class]["sample-median"])
         p_values.append(data[graphlet_class]["p-value"])
         original_median = data[graphlet_class]["original-median"]  # Same for all graphs
-    return original_median, p_values, sample_median
+
+        correlation_coefficients.append(calculate_mwu_correlation_coefficient(
+            data[graphlet_class]["u-statistic"],
+            data[graphlet_class]["original-size"],
+            data[graphlet_class]["sample-size"],
+        ))
+
+    return {
+        "original_median": original_median,
+        "p_values": p_values,
+        "sample_median": sample_median,
+        "correlation_coefficients": correlation_coefficients,
+    }
 
 
-
+def calculate_mwu_correlation_coefficient(u: float, original_size: float, sample_size: float) -> float:
+    """Calculates the correlation coefficient of a mann whitney u test."""
+    # after wendt (1972)
+    # Dealing with a common problem in social science:
+    # A simplified rank-biserial coefficient of correlation based on the U statistic
+    r_wendt = 1 - (2 * u) / (original_size * sample_size)
+    return r_wendt

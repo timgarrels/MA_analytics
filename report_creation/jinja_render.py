@@ -31,9 +31,9 @@ def get_outlier_data(local_out: Path, metric: str, graphlet_class: str) -> Dict:
 
 
 @lru_cache(maxsize=None)
-def get_relevancy_data(global_out: Path, metric: str, graphlet_class: str) -> Dict:
-    relevancy_file = global_out / metric / f"{graphlet_class_to_name(graphlet_class)}_relevance.json"
-    with open(relevancy_file, "r", encoding="utf-8") as f:
+def get_pairwise_data(global_out: Path, metric: str, graphlet_class: str) -> Dict:
+    pairwise_file = global_out / metric / f"{graphlet_class_to_name(graphlet_class)}_pairwise.json"
+    with open(pairwise_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -58,7 +58,7 @@ def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_
         get_outlier_data=get_outlier_data,
         get_frequency_split=get_frequency_split,
         round=round,
-        get_relevancy_data=get_relevancy_data,
+        get_pairwise_data=get_pairwise_data,
     )
 
     with open(report_out, "w") as f:
