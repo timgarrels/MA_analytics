@@ -49,25 +49,30 @@
     }
 
     // PMotif Inputs
+    // Mann-Whitney-U significance
     function getPValue() {
         return document.getElementById("p-value-threshold").value;
     }
     function pValueThresholdChanged() {
         document.getElementById("p-value-threshold-display").innerHTML = getPValue();
 
-
         [...document.querySelectorAll('.p-motif-card')].forEach(e => {
-            let totalGraphs = parseInt(e.querySelector('.total-graphs').innerHTML);
-            let localAlpha = (parseFloat(getPValue()) / totalGraphs).toFixed(5)
-            e.querySelector('.local-alpha').innerHTML = localAlpha;
+            try {
+                let totalGraphs = parseInt(e.querySelector('.total-graphs').innerHTML);
+                let localAlpha = (parseFloat(getPValue()) / totalGraphs).toFixed(5)
+                e.querySelector('.local-alpha').innerHTML = localAlpha;
 
-            let pValues = JSON.parse(e.querySelector('.p-values').innerHTML);
-            let pValuesRelevant = pValues.filter((p) => parseFloat(p) < localAlpha);
-            e.querySelector('.significant-p-values').innerHTML = pValuesRelevant.length + " out of " + pValues.length + " Random Graphs are significant!";
-            let percentage = (pValuesRelevant.length / pValues.length).toFixed(2);
-            e.querySelector('.significant-percent').innerHTML = percentage * 100 + "%";
+                let pValues = JSON.parse(e.querySelector('.p-values').innerHTML);
+                let pValuesRelevant = pValues.filter((p) => parseFloat(p) < localAlpha);
+                e.querySelector('.significant-p-values').innerHTML = pValuesRelevant.length + " out of " + pValues.length + " Random Graphs are significant!";
+                let percentage = (pValuesRelevant.length / pValues.length).toFixed(2);
+                e.querySelector('.significant-percent').innerHTML = percentage * 100 + "%";
+            } catch (error) {
+                // Graphlet class not present, no comparision possible, skip this pmotif card
+                return;
+            }
         })
-        updatePMotifLabel();
+        updateMWUPMotifLabel();
     }
 
     function getSignificanceThreshold() {
@@ -75,14 +80,74 @@
     }
     function significanceThresholdChanged() {
         document.getElementById("significance-threshold-display").innerHTML = getSignificanceThreshold() + "%";
-        updatePMotifLabel();
+        updateMWUPMotifLabel();
     }
-    function updatePMotifLabel() {
+
+    function updateMWUPMotifLabel() {
         [...document.querySelectorAll('.p-motif-card')].forEach(e => {
             let percentage = parseInt(e.querySelector('.significant-percent').innerHTML.replace("%", ""));
             let isPMotif = percentage > getSignificanceThreshold();
-            let pMotifBadge = e.querySelector('.p-motif-label');
+            let pMotifBadge = e.querySelector('.mwu-p-motif-label');
             pMotifBadge.style.display = isPMotif ? "initial" : "none";
+        });
+        updatePMotifLabel();
+    }
+
+    // Mann-Whitney-U Effect Size Significance
+    function getEffectSizeChoice() {
+        return document.getElementById("effect-size-choice").checked;
+    }
+
+    function getEffectThreshold() {
+        return document.getElementById("effect-size-threshold").value;
+    }
+
+    function effectSizeChoiceChanged() {
+        // Update choice highlights!
+        let choice = getEffectSizeChoice();
+        let enable = choice ? "median" : "mean";
+        let disable = choice ? "mean" : "median";
+
+        [...document.querySelectorAll('.p-motif-card')].forEach(e => {
+            let disableElement = e.querySelector('.' + disable + '-effect-size');
+            disableElement.classList.remove("text-bg-primary");
+            disableElement.classList.add("text-bg-light");
+
+            let enableElement = e.querySelector('.' + enable + '-effect-size');
+            enableElement.classList.remove("text-bg-light");
+            enableElement.classList.add("text-bg-primary");
+        });
+
+        updateEffectSizeMotifLabel();
+    }
+
+    function effectSizeThresholdChanged() {
+        document.getElementById("effect-size-threshold-display").innerHTML = getEffectThreshold();
+        updateEffectSizeMotifLabel();
+    }
+
+    function updateEffectSizeMotifLabel() {
+        [...document.querySelectorAll('.p-motif-card')].forEach(e => {
+            let threshold = getEffectThreshold();
+            let effective_threshold_choice = getEffectSizeChoice() ? "median" : "mean";
+            let effect_size = parseFloat(e.querySelector('.' + effective_threshold_choice + '-effect-size').innerHTML);
+
+            let isPMotif = Math.abs(effect_size) > threshold;
+            let pMotifBadge = e.querySelector('.effect-size-p-motif-label');
+            pMotifBadge.style.display = isPMotif ? "initial" : "none";
+        });
+        updatePMotifLabel();
+    }
+
+    // Overall p-Motif
+    function updatePMotifLabel() {
+        [...document.querySelectorAll('.p-motif-card')].forEach(e => {
+            let mwuPMotifBadge = e.querySelector('.mwu-p-motif-label');
+            let isMWUPMotif = (mwuPMotifBadge.style.display === "initial");
+
+            let effectSizeMotifBadge = e.querySelector('.effect-size-p-motif-label');
+            let isEffectSizePMotif = (effectSizeMotifBadge.style.display === "initial");
+            e.querySelector('.p-motif-label').style.display = (isMWUPMotif && isEffectSizePMotif) ? "initial": "none";
         })
     }
 
@@ -91,6 +156,8 @@
         document.getElementById("anti-motif-threshold").value = -2.5;
         document.getElementById("p-value-threshold").value = 0.05;
         document.getElementById("significance-threshold").value = 60;
+        document.getElementById("effect-size-threshold").value = 0.3;
+        document.getElementById("effect-size-choice").checked = false;
     }
 
     window.onload = function () {
@@ -101,6 +168,8 @@
         antiMotifThresholdChanged();
         pValueThresholdChanged();
         significanceThresholdChanged();
+        effectSizeChoiceChanged();
+        effectSizeThresholdChanged();
     };
 </script>
 </head>
@@ -250,17 +319,32 @@
     <h4>Graphlet p-Metric Distributions</h4>
     <div>
         <form>
-            <div class="mb-3">
-                <label for="p-value-threshold" class="form-label">Global Alpha PMotifs</label>
-                <span class="badge rounded-pill text-bg-info" id="p-value-threshold-display">Value</span>
-                <br>
-                <input type="range" class="form-range w-25" min="0.01" max="0.1" step="0.01" value="0.05" id="p-value-threshold" oninput="pValueThresholdChanged()">
+            <div id="mwu-significance-inputs">
+                <div class="mb-3">
+                    <label for="p-value-threshold" class="form-label">Global Alpha PMotifs</label>
+                    <span class="badge rounded-pill text-bg-info" id="p-value-threshold-display">Value</span>
+                    <br>
+                    <input type="range" class="form-range w-25" min="0.01" max="0.1" step="0.01" value="0.05" id="p-value-threshold" oninput="pValueThresholdChanged()">
+                </div>
+                <div class="mb-3">
+                    <label for="significance-threshold" class="form-label">Significance Threshold</label>
+                    <span class="badge rounded-pill text-bg-info" id="significance-threshold-display">Value</span>
+                    <br>
+                    <input type="range" class="form-range w-25" min="50" max="99" step="1" value="50" id="significance-threshold" oninput="significanceThresholdChanged()">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="significance-threshold" class="form-label">Significance Threshold</label>
-                <span class="badge rounded-pill text-bg-info" id="significance-threshold-display">Value</span>
-                <br>
-                <input type="range" class="form-range w-25" min="50" max="99" step="1" value="50" id="significance-threshold" oninput="significanceThresholdChanged()">
+
+            <div id="effect-size-inputs">
+                <div class="mb-3">
+                    <label for="effect-size-threshold" class="form-label">Effect Size Threshold (absolute)</label>
+                    <span class="badge rounded-pill text-bg-info" id="effect-size-threshold-display">Value</span>
+                    <br>
+                    <input type="range" class="form-range w-25" min="0.1" max="0.5" step="0.2" value="0.3" id="effect-size-threshold" oninput="effectSizeThresholdChanged()">
+                </div>
+                <div class="mb-3 form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="effect-size-choice" oninput="effectSizeChoiceChanged()">
+                  <label class="form-check-label" for="effect-size-choice">Use median instead of mean effect size</label>
+                </div>
             </div>
         </form>
     </div>
@@ -271,47 +355,80 @@
                 {% for graphlet_class in graphlet_classes %}
                     <div class="card card-block m-2 col-sm-3 p-motif-card" style="min-width: 500px;" >
                         <div class="card-body">
-                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label">pMotif</span></h5>
+                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label" style="display: none;">pMotif</span></h5>
                             {% if not get_pairwise_data(global_out, m, graphlet_class)["error"] %}
                                 <img class="card-img-bottom" src="{{ global_out / m / graphlet_class_to_name(graphlet_class) }}_sample_median.png" alt="Card image cap">
-
-                                {% if get_pairwise_data(global_out, m, graphlet_class)["real_total"] == get_pairwise_data(global_out, m, graphlet_class)["total"] %}
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["total"] }}</span>
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
-                                    </span>
-                                {% else %}
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}</span>
-                                    </span>
-
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
-                                    </span>
-                                    <div class="alert alert-warning" role="alert">
-                                    A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
-                                        (Skipped:
-                                        <span class="badge rounded-pill bg-secondary">
-                                        {{ get_pairwise_data(global_out, m, graphlet_class)["total"] - get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}
+                                <hr class="mt-2 mb-3"/>
+                                <div>
+                                Median Deviation:
+                                    <div>
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Absolute, Mean: <span class="badge rounded-pill bg-secondary abs-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_mean_average_deviation"], 2) }}</span>
                                         </span>
-                                            )
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Absolute, Median: <span class="badge rounded-pill bg-secondary abs-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_median_average_deviation"], 2) }}</span>
+                                        </span>
+                                        {% if get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"] %}
+                                            <span class="badge rounded-pill text-bg-primary">
+                                                Relative, Mean: <span class="badge rounded-pill bg-secondary rel-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"], 2) }}</span>
+                                            </span>
+                                            <span class="badge rounded-pill text-bg-primary">
+                                                Relative, Median: <span class="badge rounded-pill bg-secondary rel-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_median_average_deviation"], 2) }}</span>
+                                            </span>
+                                        {% else %}
+                                            <div class="alert alert-warning" role="alert">Some sample medians were zero, no relative deviation possible!</div>
+                                        {% endif %}
                                     </div>
-                                {% endif %}
+                                </div>
 
+                                <hr class="mt-2 mb-3"/>
+                                Significance by Mann-Whintey-U Test U
+                                <div>
+                                    {% if get_pairwise_data(global_out, m, graphlet_class)["real_total"] == get_pairwise_data(global_out, m, graphlet_class)["total"] %}
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["total"] }}</span>
+                                        </span>
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                        </span>
+                                    {% else %}
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}</span>
+                                        </span>
+
+                                        <span class="badge rounded-pill text-bg-primary">
+                                            Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                        </span>
+                                        <div class="alert alert-warning" role="alert">
+                                        A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
+                                            (Skipped:
+                                            <span class="badge rounded-pill bg-secondary">
+                                            {{ get_pairwise_data(global_out, m, graphlet_class)["total"] - get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}
+                                            </span>
+                                                )
+                                        </div>
+                                    {% endif %}
+
+                                    <div class="significant-p-values">Count out of Total Random Graphs are significant!</div>
+                                    <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
+                                    <span class="badge rounded-pill text-bg-success mwu-p-motif-label" style="display: none;">pMotif</span>
+                                    <form style="display: none">
+                                        <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
+                                        <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_pairwise_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
+                                    </form>
+                                </div>
+                                <hr class="mt-2 mb-3"/>
+                                Significance by Mann-Whintey-U Test Correlation Coefficient (Effect Size)
+                                <div>
+                                    Mean: <span class="badge rounded-pill text-bg-primary mean-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["mean_corr_coef"], 2) }}</span>
+                                    Median: <span class="badge rounded-pill text-bg-primary median-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["median_corr_coef"], 2) }}</span>
+                                    <span class="badge rounded-pill text-bg-success effect-size-p-motif-label" style="display: none;">pMotif</span>
+                                </div>
                             {% else %}
                                 <div class="alert alert-danger" role="alert">
                                     The original graph is missing this particular graph class! No comparison possible!
                                 </div>
                             {% endif %}
-                            <br>
-                            <div class="significant-p-values">Count out of Total Random Graphs are significant!</div>
-                            <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
-                            <form style="display: none">
-                                <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
-                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_pairwise_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
-                            </form>
                         </div>
                     </div>
                 {% endfor %}
