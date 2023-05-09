@@ -41,7 +41,7 @@ def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_
     with open(Path(__file__).parent / "jinja_template.jinja2", "r") as f:
         t = Template(f.read())
 
-    metrics = [f for f in os.listdir(local_out) if (local_out / f).is_dir()]
+    metrics = sorted([f for f in os.listdir(local_out) if (local_out / f).is_dir()])
     meta = get_meta(analysis_out)
 
     e = t.render(
