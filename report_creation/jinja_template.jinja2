@@ -174,8 +174,8 @@
 </script>
 </head>
 <body>
-<div class="container-fluid m-3">
-    <h1>{{ graph_name }}</h1>
+<nav class="navbar navbar-default bg-info sticky-top">
+    <h3>{{ graph_name }}</h3>
     <div class="d-flex justify-content-left">
     <span class="badge rounded-pill text-bg-primary">
     Graphlet Size <span class="badge rounded-pill bg-secondary">{{ graphlet_size }}</span>
@@ -185,11 +185,11 @@
     <select id="metricSelector" onChange="metricChanged()">
         {% for m in metric_names %}
             <option name={{ m }} value={{ m.replace(" ", "_") }}
-                    selected="{{ True if loop.index0 == 0 else False }}">{{ m }}</option>
+                    selected="{{ loop.index0 == 0 }}">{{ m }}</option>
         {% endfor %}
     </select>
     </div>
-</div>
+</nav>
 
 <div class="container-fluid m-3" id="local">
     <h3>Local Scope</h3>
