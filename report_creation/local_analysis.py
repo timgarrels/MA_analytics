@@ -74,6 +74,11 @@ def outlier_detection(original: Path, analysis_out: Path):
 def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]]):
     """Compute cut values for 1%, 5%, 95%, 99% and counts each occurrence beyond those thresholds."""
     metric_values = [v for _, v in occurrence_metric_tuples]
+    if len(metric_values) <= 1:
+        # Can be only one occurrence of a graphlet class, making percentile calculation impossible
+        invalid = {"cut_value": -1, "occurrence_count": 0, "occurrences": []}
+        return {"<1%": invalid, "<5%": invalid, ">95%": invalid, ">99%": invalid}
+
     percentile_cuts = quantiles(metric_values, n=100, method="inclusive")
 
     cuts = {
