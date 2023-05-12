@@ -122,14 +122,13 @@ def analyse_relevance(analysis_out: Path, random_graphs: List[Path], graphlet_si
 
 def dump_pairwise_data(out: Path, pair_wise_data: Dict[str, Union[float, List[float]]], total: int, error: Union[str, None]):
     """Create a json file logging data important for p-motif relevance analysis."""
-    p_values = pair_wise_data.get("p_values", [])
-    corr_coef = pair_wise_data.get("correlation_coefficients", [])
-    if len(corr_coef) == 0:
-        mean_corr_coef = None,
-        median_corr_coef = None
-    else:
-        mean_corr_coef = mean(corr_coef)
-        median_corr_coef = median(corr_coef)
+    if len(pair_wise_data.keys()) == 0:
+        with open(out, "w", encoding="utf-8") as f:
+            json.dump({"error": error}, f, indent=4)
+        return
+
+    mean_corr_coef = mean(pair_wise_data["correlation_coefficients"])
+    median_corr_coef = median(pair_wise_data["correlation_coefficients"])
 
     # MAD
     abs_deviations = [pair_wise_data["original_median"] - sample_median for sample_median in pair_wise_data["sample_median"]]
@@ -147,14 +146,14 @@ def dump_pairwise_data(out: Path, pair_wise_data: Dict[str, Union[float, List[fl
     with open(out, "w", encoding="utf-8") as f:
         json.dump({
             "error": error,
-            "p-values": p_values,
+            "p-values": pair_wise_data["p_values"],
             "mean_corr_coef": mean_corr_coef,
             "median_corr_coef": median_corr_coef,
             "abs_mean_average_deviation": abs_mean_average_deviation,
             "abs_median_average_deviation": abs_median_average_deviation,
             "rel_mean_average_deviation": rel_mean_average_deviation,
             "rel_median_average_deviation": rel_median_average_deviation,
-            "total": len(p_values),
+            "total": len(pair_wise_data["p_values"]),
             "real_total": total,
         }, f, indent=4)
 
