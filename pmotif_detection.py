@@ -101,6 +101,7 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
             graphlet_size,
             [degree, anchor_node, graph_module_participation],
             check_validity=False,
+            with_weights=True,  # Random Graphs are generated to contain weights
         )
 
 
