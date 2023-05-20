@@ -41,6 +41,7 @@ def process_graph(
     graphlet_size: int,
     metrics: List[PMetric],
     check_validity: bool = True,
+    with_weights: bool = False,
 ) -> Dict[str, float]:
     """Run a graphlet detection and metric calculation (if any) on the given graph measuring
     runtimes."""
@@ -54,6 +55,7 @@ def process_graph(
         directed=False,
         graphlet_size=graphlet_size,
         output_directory=pmotif_graph.get_graphlet_directory(),
+        with_weights=with_weights,
     )
     graphlet_runtime = time.time() - graphlet_runtime_start
 
@@ -77,10 +79,19 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
 
     pmotif_graph = PMotifGraph(edgelist, out)
 
+    with open(edgelist, "r", encoding="utf-8") as f:
+        l = f.readline()
+        parts = l.split(" ")
+        if len(parts) == 3:
+            with_weights = True
+        else:
+            with_weights = False
+
     log_r = process_graph(
         pmotif_graph,
         graphlet_size,
         metrics,
+        with_weights=with_weights,
     )
     for runtime_name, runtime in log_r.items():
         logger.info("%s: %s", runtime_name, runtime)
@@ -108,6 +119,7 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
             graphlet_size,
             metrics,
             check_validity=False,
+            with_weights=True,  # Random Graphs are generated to contain weights
         )
         for runtime_name, runtime in log_r.items():
             logger.info("Random %s, %s: %s", i, runtime_name, runtime)
