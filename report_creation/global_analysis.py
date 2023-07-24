@@ -75,6 +75,7 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
 
         fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.png")
         fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.pdf")
+        fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.svg")
         plt.close(fig)
 
         equal, above, below = split_equal_above_below(highlight, frequencies)
@@ -182,6 +183,7 @@ def plot_sample_median(
     ax.legend()
     fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.png")
     fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.pdf")
+    fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.svg")
     plt.close(fig)
 
 

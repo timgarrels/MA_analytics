@@ -27,6 +27,7 @@ def graphlet_pie_chart(frequency_data: Dict[str, int], analysis_out: Path):
 
     fig.savefig(analysis_out / "graphlet_pie.png")
     fig.savefig(analysis_out / "graphlet_pie.pdf")
+    fig.savefig(analysis_out / "graphlet_pie.svg")
     plt.close(fig)
 
 
@@ -48,6 +49,7 @@ def metric_distribution(original: Path, analysis_out: Path):
             ax.legend()
             fig.savefig(analysis_out / metric_name / f"{title}.png")
             fig.savefig(analysis_out / metric_name / f"{title}.pdf")
+            fig.savefig(analysis_out / metric_name / f"{title}.svg")
             plt.close(fig)
 
 
