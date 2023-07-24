@@ -5,7 +5,6 @@ import argparse
 from pathlib import Path
 
 from pmotif_lib.result_transformer import ResultTransformer
-from pmotif_lib.config import DATASET_DIRECTORY
 
 
 def compare_graph_module(converted: ResultTransformer, new: ResultTransformer):
@@ -47,17 +46,15 @@ def compare_anchor(converted: ResultTransformer, new: ResultTransformer):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edgelist_name", required=True, type=str)
+    parser.add_argument("--edgelist-path", required=True, type=Path)
     parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
     parser.add_argument("--first_result", required=True, type=Path)
     parser.add_argument("--second_result", required=True, type=Path)
 
     args = parser.parse_args()
 
-    edgelist_path = DATASET_DIRECTORY / args.edgelist_name
-
-    first_result = ResultTransformer.load_result(edgelist_path, args.first_result, args.graphlet_size)
-    second_result = ResultTransformer.load_result(edgelist_path, args.second_result, args.graphlet_size)
+    first_result = ResultTransformer.load_result(args.edgelist_path, args.first_result, args.graphlet_size)
+    second_result = ResultTransformer.load_result(args.edgelist_path, args.second_result, args.graphlet_size)
 
     compare_graph_module(first_result, second_result)
     compare_degree(first_result, second_result)
