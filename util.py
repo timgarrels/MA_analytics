@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import List
 
 import networkx as nx
@@ -21,12 +22,27 @@ def assert_validity(pmotif_graph: PMotifGraph):
         )  # Assert the lowest node index is >= 1
 
 
+class EdgelistFormat(Enum):
+    simple: "u v"
+    simple_weight: "u v weight"
+
+
+def get_edgelist_format(edgelist) -> EdgelistFormat:
+    with open(edgelist, "r", encoding="utf-8") as f:
+        l = f.readline()
+        parts = l.split(" ")
+        if len(parts) == 3:
+            return EdgelistFormat.simple_weight
+
+    return EdgelistFormat.simple
+
+
 def process_graph(
     pmotif_graph: PMotifGraph,
     graphlet_size: int,
     metrics: List[PMetric.PMetric],
+    edgelist_format: EdgelistFormat,
     check_validity: bool = True,
-    with_weights: bool = False,
 ):
     """Run a graphlet detection and metric calculation (if any) on the given graph."""
     if check_validity:
@@ -38,7 +54,7 @@ def process_graph(
         directed=False,
         graphlet_size=graphlet_size,
         output_directory=pmotif_graph.get_graphlet_directory(),
-        with_weights=with_weights,
+        with_weights=True if edgelist_format == EdgelistFormat.simple_weight else False,
     )
 
     if len(metrics) == 0:

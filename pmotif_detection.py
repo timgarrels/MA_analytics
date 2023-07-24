@@ -14,7 +14,7 @@ from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
 
-from util import process_graph
+from util import process_graph, get_edgelist_format, EdgelistFormat
 
 
 def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
@@ -26,19 +26,11 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
 
     pmotif_graph = PMotifGraph(edgelist, out)
 
-    with open(edgelist, "r", encoding="utf-8") as f:
-        l = f.readline()
-        parts = l.split(" ")
-        if len(parts) == 3:
-            with_weights = True
-        else:
-            with_weights = False
-
     process_graph(
         pmotif_graph,
         graphlet_size,
         [degree, anchor_node, graph_module_participation],
-        with_weights=with_weights,
+        edgelist_format=get_edgelist_format(edgelist),
     )
 
     randomized_pmotif_graph = PMotifGraphWithRandomization.create_from_pmotif_graph(
@@ -58,7 +50,7 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
             graphlet_size,
             [degree, anchor_node, graph_module_participation],
             check_validity=False,
-            with_weights=True,  # Random Graphs are generated to contain weights
+            edgelist_format=EdgelistFormat.simple_weight,  # Random Graphs are generated to contain weights
         )
 
 

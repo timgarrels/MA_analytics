@@ -18,7 +18,7 @@ from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
 
-from util import process_graph
+from util import process_graph, get_edgelist_format
 
 
 def main(edgelist: Path, out: Path, graphlet_size: int):
@@ -33,19 +33,11 @@ def main(edgelist: Path, out: Path, graphlet_size: int):
     # Remove the faulty result
     shutil.rmtree(pmotif_graph.get_graphlet_directory() / str(graphlet_size))
 
-    with open(edgelist, "r", encoding="utf-8") as f:
-        l = f.readline()
-        parts = l.split(" ")
-        if len(parts) == 3:
-            with_weights = True
-        else:
-            with_weights = False
-
     process_graph(
         pmotif_graph,
         graphlet_size,
         [degree, anchor_node, graph_module_participation],
-        with_weights=with_weights,
+        edgelist_format=get_edgelist_format(edgelist),
     )
 
 

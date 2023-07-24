@@ -21,7 +21,7 @@ from pmotif_lib.p_metric.p_graph_module_participation import PGraphModulePartici
 from custom_pmetrics.ExternalWeight import ExternalWeight
 from custom_pmetrics.GivenModuleParticipation import GivenModuleParticipation
 from custom_pmetrics.InternalWeight import InternalWeight
-from util import process_graph
+from util import process_graph, get_edgelist_format
 
 
 def main(
@@ -53,19 +53,11 @@ def main(
 
     pmotif_graph = PMotifGraph(edgelist, out)
 
-    with open(edgelist, "r", encoding="utf-8") as f:
-        l = f.readline()
-        parts = l.split(" ")
-        if len(parts) == 3:
-            with_weights = True
-        else:
-            with_weights = False
-
     process_graph(
         pmotif_graph,
         graphlet_size,
         metrics,
-        with_weights=with_weights,
+        edgelist_format=get_edgelist_format(edgelist),
     )
 
     # No random graphs, as given modules, external weight, and internal weight are not defined on randomized graphs
