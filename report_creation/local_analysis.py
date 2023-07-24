@@ -8,7 +8,9 @@ from typing import Dict, List, Tuple
 from matplotlib import pyplot as plt
 from pmotif_lib.graphlet_representation import graphlet_class_to_name
 from tqdm import tqdm
+from report_creation.util import figsize, dpi, font_size
 
+plt.rcParams.update({'font.size': font_size})
 
 @lru_cache(maxsize=None)
 def get_frequency_data(p: Path):
@@ -19,7 +21,7 @@ def get_frequency_data(p: Path):
 
 def graphlet_pie_chart(frequency_data: Dict[str, int], analysis_out: Path):
     """Visualize the graphlet classes and their occurrence count in a pie chart."""
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     labels = [graphlet_class_to_name(graphlet_class) for graphlet_class in frequency_data.keys()]
     ax.pie(frequency_data.values(), labels=labels)
     ax.set_title("Distribution of Graphlet Classes in the original graph.")
@@ -41,7 +43,7 @@ def metric_distribution(original: Path, analysis_out: Path):
     for metric_name, graphlet_class_to_metrics in tqdm(metrics.items(), desc="Processing metric distribution"):
         os.makedirs(analysis_out / metric_name, exist_ok=True)
         for graphlet_class, metric_values in graphlet_class_to_metrics.items():
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
             ax.hist(
                 metric_values,
                 label=metric_name,

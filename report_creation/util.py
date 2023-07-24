@@ -17,6 +17,10 @@ def get_zscore(point: float, values: List[float]) -> float:
     return (point - mean(values)) / stdev(values)
 
 
+figsize = (7,6)
+dpi = 500
+font_size = 22
+
 short_metric_names = {
     "degree": "degree",
     "graph module participation ratio": "MPR",

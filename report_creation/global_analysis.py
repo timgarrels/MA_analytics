@@ -11,7 +11,9 @@ import json
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
 from tqdm import tqdm
 
-from report_creation.util import get_frequency_data, get_zscore
+from report_creation.util import get_frequency_data, get_zscore, figsize, dpi, font_size
+
+plt.rcParams.update({'font.size': font_size})
 
 RANDOM_GRAPH_DIR_REGEX = re.compile(r"\d+_random\.edgelist")
 
@@ -60,7 +62,7 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
         highlight = original_frequency[graphlet_class]
         z_score = get_zscore(highlight, frequencies)
 
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
         ax.hist(frequencies, label="Random Graphs")
         ax.axvline(
             highlight,
@@ -169,7 +171,7 @@ def plot_sample_median(
         graphlet_class: str,
 ):
     """Plot a median histogram, highlighting the original median."""
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     ax.hist(
         sample_median,
         label="Random Graphs",
