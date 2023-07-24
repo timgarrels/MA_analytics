@@ -61,7 +61,7 @@ def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_
         local_out=local_out,
         global_out=global_out,
         metric_names=metrics,
-        graphlet_pie=str(local_out.absolute() / "graphlet_pie.png"),
+        graphlet_pie=str(local_out.absolute() / "graphlet_pie"),
         graphlet_classes=graphlet_classes_from_size(meta["graphlet_size"]),
         # Methods
         graphlet_class_to_name=graphlet_class_to_name,

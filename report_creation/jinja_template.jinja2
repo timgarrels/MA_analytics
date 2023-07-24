@@ -188,12 +188,12 @@
 </style>
 </head>
 <body>
-<nav class="navbar navbar-default bg-info sticky-top">
-    <h3>{{ graph_name }}</h3>
+<nav class="navbar navbar-default bg-info sticky-top" style="font-size: 1.5rem; padding: 10px">
+    <h1>{{ graph_name }}</h1>
     <div class="d-flex justify-content-left">
-    <span class="badge rounded-pill text-bg-primary">
-    Graphlet Size <span class="badge rounded-pill bg-secondary">{{ graphlet_size }}</span>
-    </span>
+        <span class="badge rounded-pill text-bg-primary">
+        Graphlet Size <span class="badge rounded-pill bg-secondary">{{ graphlet_size }}</span>
+        </span>
 
         <label for="metricSelector"></label>
         <select id="metricSelector" onChange="metricChanged()">
@@ -212,59 +212,61 @@
         graphlets per class
         and the distribution of positional metrics within each graphlet class.
     </p>
+    <div style="padding: 20px">
         <div class="card m-3" style="min-width: 500px; max-width: 30%">
             <div class="card-body">
                 <h5 class="card-title">Pie Chart of the Graphlet Class Frequencies</h5>
-                <img class="card-img-bottom" src="{{ graphlet_pie }}" alt="Pie Chart of the Graphlet Class Frequencies">
+                <img class="card-img-bottom" src="{{ to_base_64(graphlet_pie) }}" alt="Pie Chart of the Graphlet Class Frequencies">
             </div>
         </div>
 
-    <h4>Graphlet p-Metric Distributions</h4>
-    {% for m in metric_names %}
-        <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
-            <div class="row m-3 card-deck">
-                {% for graphlet_class in graphlet_classes %}
-                    <div class="card card-block m-2 col-sm-3" style="min-width: 500px;" >
-                        <div class="card-body">
-                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}</h5>
-                            <img class="card-img-bottom" src="{{ local_out / m / graphlet_class_to_name(graphlet_class) }}.png" alt="Card image cap">
-                            {% if not has_outlier_file(local_out, m, graphlet_class) %}
-                                <div class="alert alert-danger" role="alert">
-                                    The graph {{ graph_name }} did not contain occurrences of {{ graphlet_class_to_name(graphlet_class) }}! Therefor this plot is empty!
-                                </div>
-                            {% else %}
-                                <div>
-                                    <table class="card-table table table-sm">
-                                        <tbody>
-                                            {% for percent, data in get_outlier_data(local_out, m, graphlet_class).items() %}
-                                                <tr>
-                                                    <td>{{ percent }}</td>
-                                                    <td>
-                                                        <span class="badge rounded-pill text-bg-primary">
-                                                            Occurrence Count <span class="badge rounded-pill bg-secondary">{{ data["occurrence_count"] }}</span>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge rounded-pill text-bg-primary">
-                                                            Cut Value <span class="badge rounded-pill bg-secondary">{{ data["cut_value"] }}</span>
-                                                        </span>
-                                                    </td>
-                                                    <td>
+        <h4>Graphlet p-Metric Distributions</h4>
+        {% for m in metric_names %}
+            <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
+                <div class="row m-3 card-deck">
+                    {% for graphlet_class in graphlet_classes %}
+                        <div class="card card-block m-2 col-sm-3" style="min-width: 500px;" >
+                            <div class="card-body">
+                                <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}</h5>
+                                <img class="card-img-bottom" src="{{ to_base_64(local_out / m / graphlet_class_to_name(graphlet_class)) }}" alt="Card image cap">
+                                {% if not has_outlier_file(local_out, m, graphlet_class) %}
+                                    <div class="alert alert-danger" role="alert">
+                                        The graph {{ graph_name }} did not contain occurrences of {{ graphlet_class_to_name(graphlet_class) }}! Therefor this plot is empty!
+                                    </div>
+                                {% else %}
+                                    <div class="card-text">
+                                        <table class="card-table table table-sm">
+                                            <tbody>
+                                                {% for percent, data in get_outlier_data(local_out, m, graphlet_class).items() %}
+                                                    <tr>
+                                                        <td>{{ percent }}</td>
+                                                        <td>
+                                                            <span class="badge rounded-pill text-bg-primary">
+                                                                Occurrence Count <span class="badge rounded-pill bg-secondary">{{ data["occurrence_count"] }}</span>
+                                                            </span>
+                                                        </td>
+                                                        <td class="cut-value-display">
+                                                            <span class="badge rounded-pill text-bg-primary">
+                                                                Cut Value <span class="badge rounded-pill bg-secondary">{{ data["cut_value"] }}</span>
+                                                            </span>
+                                                        </td>
+                                                        <td colspan="3">
 
-                                                            <textarea title="Individual Occurrences" rows="1" cols="10">{{ data["occurrences"] }}</textarea>
-                                                    </td>
-                                                </tr>
-                                            {% endfor %}
-                                      </tbody>
-                                    </table>
-                                </div>
-                            {% endif %}
+                                                                <textarea title="Individual Occurrences" rows="1" cols="10">{{ data["occurrences"] }}</textarea>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                {% endif %}
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
 <div class="container-fluid m-3" id="global">
@@ -272,183 +274,192 @@
     <p>
         This Scope allows to compare the graphlets in G with graphlets of a randomized version of G. Common insights are whether a specific graphlet class is a motif or a p-motif.
     </p>
-    <h4>Graphlet Frequency Distributions</h4>
-    <div>
-        <form>
-            <div class="mb-3">
-                <label for="motif-threshold" class="form-label">Z-Score Threshold for Motif</label>
-                <span class="badge rounded-pill text-bg-info" id="motif-threshold-display">Value</span>
-                <br>
-                <input type="range" class="form-range w-25" min="0" max="10" step="0.5" value="2.5" id="motif-threshold" oninput="motifThresholdChanged()">
-            </div>
-            <div class="mb-3">
-                <label for="anti-motif-threshold" class="form-label">Z-Score Threshold for Anti-Motif</label>
-                <span class="badge rounded-pill text-bg-info" id="anti-motif-threshold-display">Value</span>
-                <br>
-                <input type="range" class="form-range w-25" min="-10" max="0" step="0.5" value="-2.5" id="anti-motif-threshold" oninput="antiMotifThresholdChanged()">
-            </div>
-        </form>
-    </div>
-    <div class="row m-3 card-deck">
-    {% for graphlet_class in graphlet_classes %}
-        <div class="card card-block m-2 col-sm-3 motif-card" style="min-width: 500px;" >
-            <div class="card-body">
-                <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}
-                    <span class="badge rounded-pill text-bg-success motif-highlight" style="display: none">Motif</span>
-                    <span class="badge rounded-pill text-bg-success anti-motif-highlight" style="display: none">Anti-Motif</span>
-                </h5>
-                <img class="card-img-bottom" src="{{ global_out / graphlet_class_to_name(graphlet_class) }}_frequency.png" alt="Card image cap">
-                <div class="card-text">
-                    <span class="badge rounded-pill text-bg-primary">
-                        Total Random Graphs
-                        <span class="badge rounded-pill bg-secondary">
-                            {{ get_frequency_split(global_out, graphlet_class)["above"] + get_frequency_split(global_out, graphlet_class)["equal"] + get_frequency_split(global_out, graphlet_class)["below"] }}
+
+    <div style="padding: 20px">
+        <h4>Graphlet Frequency Distributions</h4>
+        <div>
+            <form>
+                <div class="mb-3">
+                    <label for="motif-threshold" class="form-label">Z-Score Threshold for Motif</label>
+                    <span class="badge rounded-pill text-bg-info" id="motif-threshold-display">Value</span>
+                    <br>
+                    <input type="range" class="form-range w-25" min="0" max="10" step="0.5" value="2.5" id="motif-threshold" oninput="motifThresholdChanged()">
+                </div>
+                <div class="mb-3">
+                    <label for="anti-motif-threshold" class="form-label">Z-Score Threshold for Anti-Motif</label>
+                    <span class="badge rounded-pill text-bg-info" id="anti-motif-threshold-display">Value</span>
+                    <br>
+                    <input type="range" class="form-range w-25" min="-10" max="0" step="0.5" value="-2.5" id="anti-motif-threshold" oninput="antiMotifThresholdChanged()">
+                </div>
+            </form>
+        </div>
+        <div class="row m-3 card-deck">
+        {% for graphlet_class in graphlet_classes %}
+            <div class="card card-block m-2 col-sm-3 motif-card" style="min-width: 500px;" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}
+                        <span class="badge rounded-pill text-bg-success motif-highlight" style="display: none">Motif</span>
+                        <span class="badge rounded-pill text-bg-success anti-motif-highlight" style="display: none">Anti-Motif</span>
+                    </h5>
+                    <img class="card-img-bottom" src="{{ to_base_64(global_out / (graphlet_class_to_name(graphlet_class) + "_frequency")) }}" alt="Card image cap">
+                    <div class="card-text">
+                        <span class="badge rounded-pill text-bg-primary">
+                            Total Random Graphs
+                            <span class="badge rounded-pill bg-secondary">
+                                {{ get_frequency_split(global_out, graphlet_class)["above"] + get_frequency_split(global_out, graphlet_class)["equal"] + get_frequency_split(global_out, graphlet_class)["below"] }}
+                            </span>
                         </span>
-                    </span>
-                    <br>
-                    Original Frequency:
-                    <span class="badge rounded-pill text-bg-primary">
-                        Above
-                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["above"] }}</span>
-                    </span>
-                    <span class="badge rounded-pill text-bg-primary">
-                        Equal
-                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["equal"] }}</span>
-                    </span>
-                    <span class="badge rounded-pill text-bg-primary">
-                        Below
-                        <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["below"] }}</span>
-                    </span>
-                    <br>
-                    <span class="badge rounded-pill text-bg-success">
-                        Z-Score
-                        <span class="badge rounded-pill bg-secondary z-score-value">{{ round(get_frequency_split(global_out, graphlet_class)["z-score"], 2) }}</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    </div>
-
-    <h4>Graphlet p-Metric Distributions</h4>
-    <div>
-        <form>
-            <div id="mwu-significance-inputs">
-                <div class="mb-3">
-                    <label for="p-value-threshold" class="form-label">Global Alpha PMotifs</label>
-                    <span class="badge rounded-pill text-bg-info" id="p-value-threshold-display">Value</span>
-                    <br>
-                    <input type="range" class="form-range w-25" min="0.01" max="0.1" step="0.01" value="0.05" id="p-value-threshold" oninput="pValueThresholdChanged()">
-                </div>
-                <div class="mb-3">
-                    <label for="significance-threshold" class="form-label">Significance Threshold</label>
-                    <span class="badge rounded-pill text-bg-info" id="significance-threshold-display">Value</span>
-                    <br>
-                    <input type="range" class="form-range w-25" min="50" max="99" step="1" value="50" id="significance-threshold" oninput="significanceThresholdChanged()">
-                </div>
-            </div>
-
-            <div id="effect-size-inputs">
-                <div class="mb-3">
-                    <label for="effect-size-threshold" class="form-label">Effect Size Threshold (absolute)</label>
-                    <span class="badge rounded-pill text-bg-info" id="effect-size-threshold-display">Value</span>
-                    <br>
-                    <input type="range" class="form-range w-25" min="0.1" max="0.5" step="0.2" value="0.3" id="effect-size-threshold" oninput="effectSizeThresholdChanged()">
-                </div>
-                <div class="mb-3 form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="effect-size-choice" oninput="effectSizeChoiceChanged()">
-                  <label class="form-check-label" for="effect-size-choice">Use median instead of mean effect size</label>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    {% for m in metric_names %}
-        <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
-            <div class="row m-3 card-deck">
-                {% for graphlet_class in graphlet_classes %}
-                    <div class="card card-block m-2 col-sm-3 p-motif-card" style="min-width: 500px;" >
-                        <div class="card-body">
-                            <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label" style="display: none;">pMotif</span></h5>
-                            {% if not get_pairwise_data(global_out, m, graphlet_class)["error"] %}
-                                <img class="card-img-bottom" src="{{ global_out / m / graphlet_class_to_name(graphlet_class) }}_sample_median.png" alt="Card image cap">
-                                <hr class="mt-2 mb-3"/>
-                                <div>
-                                Median Deviation:
-                                    <div>
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Absolute, Mean: <span class="badge rounded-pill bg-secondary abs-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_mean_average_deviation"], 2) }}</span>
-                                        </span>
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Absolute, Median: <span class="badge rounded-pill bg-secondary abs-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_median_average_deviation"], 2) }}</span>
-                                        </span>
-                                        {% if get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"] %}
-                                            <span class="badge rounded-pill text-bg-primary">
-                                                Relative, Mean: <span class="badge rounded-pill bg-secondary rel-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"], 2) }}</span>
-                                            </span>
-                                            <span class="badge rounded-pill text-bg-primary">
-                                                Relative, Median: <span class="badge rounded-pill bg-secondary rel-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_median_average_deviation"], 2) }}</span>
-                                            </span>
-                                        {% else %}
-                                            <div class="alert alert-warning" role="alert">Some sample medians were zero, no relative deviation possible!</div>
-                                        {% endif %}
-                                    </div>
-                                </div>
-
-                                <hr class="mt-2 mb-3"/>
-                                Significance by Mann-Whintey-U Test U
-                                <div>
-                                    {% if get_pairwise_data(global_out, m, graphlet_class)["real_total"] == get_pairwise_data(global_out, m, graphlet_class)["total"] %}
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["total"] }}</span>
-                                        </span>
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
-                                        </span>
-                                    {% else %}
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}</span>
-                                        </span>
-
-                                        <span class="badge rounded-pill text-bg-primary">
-                                            Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
-                                        </span>
-                                        <div class="alert alert-warning" role="alert">
-                                        A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
-                                            (Skipped:
-                                            <span class="badge rounded-pill bg-secondary">
-                                            {{ get_pairwise_data(global_out, m, graphlet_class)["total"] - get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}
-                                            </span>
-                                                )
-                                        </div>
-                                    {% endif %}
-
-                                    <div class="significant-p-values">Count out of Total Random Graphs are significant!</div>
-                                    <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
-                                    <span class="badge rounded-pill text-bg-success mwu-p-motif-label" style="display: none;">pMotif</span>
-                                    <form style="display: none">
-                                        <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
-                                        <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_pairwise_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
-                                    </form>
-                                </div>
-                                <hr class="mt-2 mb-3"/>
-                                Significance by Mann-Whintey-U Test Correlation Coefficient (Effect Size)
-                                <div>
-                                    Mean: <span class="badge rounded-pill text-bg-primary mean-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["mean_corr_coef"], 2) }}</span>
-                                    Median: <span class="badge rounded-pill text-bg-primary median-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["median_corr_coef"], 2) }}</span>
-                                    <span class="badge rounded-pill text-bg-success effect-size-p-motif-label" style="display: none;">pMotif</span>
-                                </div>
-                            {% else %}
-                                <div class="alert alert-danger" role="alert">
-                                    The original graph is missing this particular graph class! No comparison possible!
-                                </div>
-                            {% endif %}
+                        <div style="display: none">
+                            <br>
+                            Original Frequency:
+                            <span class="badge rounded-pill text-bg-primary">
+                                Above
+                                <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["above"] }}</span>
+                            </span>
+                            <span class="badge rounded-pill text-bg-primary">
+                                Equal
+                                <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["equal"] }}</span>
+                            </span>
+                            <span class="badge rounded-pill text-bg-primary">
+                                Below
+                                <span class="badge rounded-pill bg-secondary">{{ get_frequency_split(global_out, graphlet_class)["below"] }}</span>
+                            </span>
+                            <br>
                         </div>
+                        <span class="badge rounded-pill text-bg-success">
+                            Z-Score
+                            <span class="badge rounded-pill bg-secondary z-score-value">{{ round(get_frequency_split(global_out, graphlet_class)["z-score"], 2) }}</span>
+                        </span>
                     </div>
-                {% endfor %}
+                </div>
             </div>
+        {% endfor %}
         </div>
-    {% endfor %}
+
+        <h4>Graphlet p-Metric Distributions</h4>
+        <div>
+            <form>
+                <div id="mwu-significance-inputs">
+                    <div class="mb-3">
+                        <label for="p-value-threshold" class="form-label">Global Alpha PMotifs</label>
+                        <span class="badge rounded-pill text-bg-info" id="p-value-threshold-display">Value</span>
+                        <br>
+                        <input type="range" class="form-range w-25" min="0.01" max="0.1" step="0.01" value="0.05" id="p-value-threshold" oninput="pValueThresholdChanged()">
+                    </div>
+                    <div class="mb-3">
+                        <label for="significance-threshold" class="form-label">Significance Threshold</label>
+                        <span class="badge rounded-pill text-bg-info" id="significance-threshold-display">Value</span>
+                        <br>
+                        <input type="range" class="form-range w-25" min="50" max="99" step="1" value="50" id="significance-threshold" oninput="significanceThresholdChanged()">
+                    </div>
+                </div>
+
+                <div id="effect-size-inputs">
+                    <div class="mb-3">
+                        <label for="effect-size-threshold" class="form-label">Effect Size Threshold (absolute)</label>
+                        <span class="badge rounded-pill text-bg-info" id="effect-size-threshold-display">Value</span>
+                        <br>
+                        <input type="range" class="form-range w-25" min="0.1" max="0.5" step="0.2" value="0.3" id="effect-size-threshold" oninput="effectSizeThresholdChanged()">
+                    </div>
+                    <div class="mb-3 form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="effect-size-choice" oninput="effectSizeChoiceChanged()">
+                      <label class="form-check-label" for="effect-size-choice">Use median instead of mean effect size</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        {% for m in metric_names %}
+            <div class="metric {{ m.replace(" ", "_") }}" style="display: none">
+                <div class="row m-3 card-deck">
+                    {% for graphlet_class in graphlet_classes %}
+                        <div class="card card-block m-2 col-sm-3 p-motif-card" style="min-width: 500px;" >
+                            <div class="card-body">
+                                <h5 class="card-title">{{ graphlet_class_to_name(graphlet_class) }}<span class="badge rounded-pill text-bg-success p-motif-label" style="display: none;">pMotif</span></h5>
+                                {% if not get_pairwise_data(global_out, m, graphlet_class)["error"] %}
+                                    <img class="card-img-bottom" src="{{ to_base_64(global_out / m / (graphlet_class_to_name(graphlet_class) + "_sample_median")) }}" alt="Card image cap">
+                                    <div class="card-text">
+                                        <hr class="mt-2 mb-3"/>
+                                        <div>
+                                        Median Deviation:
+                                            <div>
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Absolute, Mean: <span class="badge rounded-pill bg-secondary abs-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_mean_average_deviation"], 2) }}</span>
+                                                </span>
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Absolute, Median: <span class="badge rounded-pill bg-secondary abs-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["abs_median_average_deviation"], 2) }}</span>
+                                                </span>
+                                                {% if get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"] %}
+                                                    <span class="badge rounded-pill text-bg-primary">
+                                                        Relative, Mean: <span class="badge rounded-pill bg-secondary rel-mean-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_mean_average_deviation"], 2) }}</span>
+                                                    </span>
+                                                    <span class="badge rounded-pill text-bg-primary">
+                                                        Relative, Median: <span class="badge rounded-pill bg-secondary rel-median-deviation">{{ round(get_pairwise_data(global_out, m, graphlet_class)["rel_median_average_deviation"], 2) }}</span>
+                                                    </span>
+                                                {% else %}
+                                                    <div class="alert alert-warning" role="alert">Some sample medians were zero, no relative deviation possible!</div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-2 mb-3"/>
+                                        Significance by Mann-Whintey-U Test U
+                                        <div>
+                                            {% if get_pairwise_data(global_out, m, graphlet_class)["real_total"] == get_pairwise_data(global_out, m, graphlet_class)["total"] %}
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["total"] }}</span>
+                                                </span>
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                                </span>
+                                            {% else %}
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Total Random Graphs<span class="badge rounded-pill bg-secondary total-graphs">{{ get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}</span>
+                                                </span>
+
+                                                <span class="badge rounded-pill text-bg-primary">
+                                                    Local Alpha: <span class="badge rounded-pill bg-secondary local-alpha">Value</span>
+                                                </span>
+                                                <div class="alert alert-warning" role="alert">
+                                                A few random graphs were missing this particular graphlet class. They were skipped in the comparison.
+                                                    (Skipped:
+                                                    <span class="badge rounded-pill bg-secondary">
+                                                    {{ get_pairwise_data(global_out, m, graphlet_class)["total"] - get_pairwise_data(global_out, m, graphlet_class)["real_total"] }}
+                                                    </span>
+                                                        )
+                                                </div>
+                                            {% endif %}
+
+                                            <div class="significant-p-values">Count out of Total Random Graphs are significant!</div>
+                                            <span class="badge rounded-pill text-bg-primary significant-percent">X%</span>
+                                            <span class="badge rounded-pill text-bg-success mwu-p-motif-label" style="display: none;">pMotif</span>
+                                            <form style="display: none">
+                                                <label for="p-values-{{ m }}-{{ graphlet_class }}" class="form-label">P-Values</label>
+                                                <textarea id="p-values-{{ m }}-{{ graphlet_class }}" class="p-values">{{ get_pairwise_data(global_out, m, graphlet_class)["p-values"] }}</textarea>
+                                            </form>
+                                        </div>
+                                        <hr class="mt-2 mb-3"/>
+                                        Significance by Effect Size (Rank-biserial correlation)
+                                        <div>
+                                            Mean: <span class="badge rounded-pill text-bg-primary mean-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["mean_corr_coef"], 2) }}</span>
+                                            Median: <span class="badge rounded-pill text-bg-primary median-effect-size">{{ round(get_pairwise_data(global_out, m, graphlet_class)["median_corr_coef"], 2) }}</span>
+                                            <span class="badge rounded-pill text-bg-success effect-size-p-motif-label" style="display: none;">pMotif</span>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="card-text">
+                                        <div class="alert alert-danger" role="alert">
+                                            The original graph is missing this particular graph class! No comparison possible!
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 </body>
 </html>
