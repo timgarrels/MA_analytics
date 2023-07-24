@@ -73,6 +73,8 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
         ax.set_ylabel("#")
         ax.legend()
 
+        fig.tight_layout()
+
         fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.png")
         fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.pdf")
         fig.savefig(analysis_out / f"{graphlet_class_to_name(graphlet_class)}_frequency.svg")
@@ -181,6 +183,9 @@ def plot_sample_median(
     ax.set_xlabel(f"{metric_name} median")
     ax.set_ylabel("#")
     ax.legend()
+
+    fig.tight_layout()
+
     fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.png")
     fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.pdf")
     fig.savefig(analysis_out / metric_name / f"{graphlet_class_to_name(graphlet_class)}_sample_median.svg")

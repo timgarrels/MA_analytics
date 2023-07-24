@@ -25,6 +25,8 @@ def graphlet_pie_chart(frequency_data: Dict[str, int], analysis_out: Path):
     ax.set_title("Distribution of Graphlet Classes in the original graph.")
     ax.legend()
 
+    fig.tight_layout()
+
     fig.savefig(analysis_out / "graphlet_pie.png")
     fig.savefig(analysis_out / "graphlet_pie.pdf")
     fig.savefig(analysis_out / "graphlet_pie.svg")
@@ -47,6 +49,9 @@ def metric_distribution(original: Path, analysis_out: Path):
             title = graphlet_class_to_name(graphlet_class)
             ax.set_title(title)
             ax.legend()
+
+            fig.tight_layout()
+
             fig.savefig(analysis_out / metric_name / f"{title}.png")
             fig.savefig(analysis_out / metric_name / f"{title}.pdf")
             fig.savefig(analysis_out / metric_name / f"{title}.svg")
