@@ -86,7 +86,7 @@ def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]])
         invalid = {"cut_value": -1, "occurrence_count": 0, "occurrences": []}
         return {"<1%": invalid, "<5%": invalid, ">95%": invalid, ">99%": invalid}
 
-    percentile_cuts = quantiles(metric_values, n=100, method="inclusive")
+    percentile_cuts = quantiles(metric_values, n=100, method="exclusive")
 
     cuts = {
         "<1%": {
@@ -112,16 +112,16 @@ def get_percentile_cuts(occurrence_metric_tuples: List[Tuple[List[str], float]])
     }
 
     for occurrence, v in occurrence_metric_tuples:
-        if v < cuts["<1%"]["cut_value"]:
+        if v < percentile_cuts[0]:
             cuts["<1%"]["occurrence_count"] += 1
             cuts["<1%"]["occurrences"].append(occurrence)
-        if v < cuts["<5%"]["cut_value"]:
+        if v < percentile_cuts[4]:
             cuts["<5%"]["occurrence_count"] += 1
             cuts["<5%"]["occurrences"].append(occurrence)
-        if v > cuts[">95%"]["cut_value"]:
+        if v > percentile_cuts[-5]:
             cuts[">95%"]["occurrence_count"] += 1
             cuts[">95%"]["occurrences"].append(occurrence)
-        if v > cuts[">99%"]["cut_value"]:
+        if v > percentile_cuts[-1]:
             cuts[">99%"]["occurrence_count"] += 1
             cuts[">99%"]["occurrences"].append(occurrence)
     return cuts
