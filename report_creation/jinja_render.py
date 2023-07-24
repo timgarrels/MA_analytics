@@ -3,6 +3,7 @@ import os
 from functools import lru_cache
 from pathlib import Path
 from typing import Dict
+import base64
 
 from jinja2 import Template
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
@@ -38,6 +39,15 @@ def get_pairwise_data(global_out: Path, metric: str, graphlet_class: str) -> Dic
         return json.load(f)
 
 
+def to_base_64(p: Path) -> str:
+    """Converts the given image to base64 representation in html"""
+    p = Path(str(p) + ".png")
+
+    with open(p, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    return f"data:image/png;base64,{encoded_string.decode()}"
+
+
 def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_out: Path):
     with open(Path(__file__).parent / "jinja_template.jinja2", "r") as f:
         t = Template(f.read())
@@ -61,6 +71,7 @@ def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_
         round=round,
         get_pairwise_data=get_pairwise_data,
         short_metric_names=short_metric_names,
+        to_base_64=to_base_64,
     )
 
     with open(report_out, "w") as f:
