@@ -6,3 +6,4 @@ logs/
 run_scripts/*.batch
 notebooks/*.pdf
 .ipynb_checkpoints/
+real_analysis_out/
