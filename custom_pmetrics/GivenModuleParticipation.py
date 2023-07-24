@@ -1,8 +1,7 @@
 """PMetric to calculate the number of predefined graph modules a graphlet touches.
 ONLY WORKS ON THE ORIGINAL GRAPH!"""
-from typing import List, Dict
+from typing import List
 import networkx as nx
-from networkx.algorithms.community import greedy_modularity_communities
 
 from pmotif_lib.p_metric.p_metric import PMetric, PreComputation
 
