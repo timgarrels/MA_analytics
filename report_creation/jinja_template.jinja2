@@ -195,13 +195,13 @@
     Graphlet Size <span class="badge rounded-pill bg-secondary">{{ graphlet_size }}</span>
     </span>
 
-    <label for="metricSelector"></label>
-    <select id="metricSelector" onChange="metricChanged()">
-        {% for m in metric_names %}
-            <option name={{ m }} value={{ m.replace(" ", "_") }}
-                    selected="{{ loop.index0 == 0 }}">{{ m }}</option>
-        {% endfor %}
-    </select>
+        <label for="metricSelector"></label>
+        <select id="metricSelector" onChange="metricChanged()">
+            {% for m in metric_names %}
+                <option name={{ m }} value={{ m.replace(" ", "_") }}
+                        selected="{{ loop.index0 == 0 }}">{{ short_metric_names[m] }}</option>
+            {% endfor %}
+        </select>
     </div>
 </nav>
 

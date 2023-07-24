@@ -15,3 +15,12 @@ def get_zscore(point: float, values: List[float]) -> float:
     if point == 0 and set(values) == {0}:
         return 0
     return (point - mean(values)) / stdev(values)
+
+
+short_metric_names = {
+    "degree": "degree",
+    "graph module participation ratio": "MPR",
+    "min normalized anchor hop distance": "HD (min)",
+    "max normalized anchor hop distance": "HD (max)",
+    "mean normalized anchor hop distance": "HD (mean)",
+}

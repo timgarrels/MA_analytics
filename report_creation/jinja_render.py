@@ -6,6 +6,7 @@ from typing import Dict
 
 from jinja2 import Template
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
+from util import short_metric_names
 
 
 def get_meta(analysis_out: Path) -> Dict:
@@ -59,6 +60,7 @@ def create_report(analysis_out: Path, local_out: Path, global_out: Path, report_
         get_frequency_split=get_frequency_split,
         round=round,
         get_pairwise_data=get_pairwise_data,
+        short_metric_names=short_metric_names,
     )
 
     with open(report_out, "w") as f:
