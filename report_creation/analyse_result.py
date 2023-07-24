@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 
 import report_creation.local_analysis as local_analysis
+from pmotif_cml_interface import add_common_args
 from report_creation.global_analysis import analyse_relevance, get_random_graph_paths, plot_frequency_histogram
 from report_creation.jinja_render import create_report
 
@@ -62,10 +63,9 @@ def main(analysis_out: Path, edgelist: Path, graphlet_size: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--analysis_out", required=True, type=Path)
-    parser.add_argument("--edgelist_name", required=True, type=Path)
-    parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
+    parser.add_argument("--analysis-out", required=True, type=Path)
+    add_common_args(parser)
 
     args = parser.parse_args()
 
-    main(args.analysis_out, args.edgelist_name, args.graphlet_size)
+    main(args.analysis_out, args.edgelist_path, args.graphlet_size)
