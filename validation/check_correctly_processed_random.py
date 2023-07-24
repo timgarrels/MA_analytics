@@ -1,4 +1,4 @@
-"""We might process random graphs wrongly by loading them with out weights, despite them having weights.
+"""We might process random graphs wrongly by loading them without weights, despite them having weights.
 This script runs the gtrieScanner on the original graph, and one random graph with 3, and one with 4 graphlet size.
 
 And checks whether the stored motif frequency is the same as gtrieScanner computes.
