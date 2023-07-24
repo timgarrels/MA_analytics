@@ -7,7 +7,7 @@ import base64
 
 from jinja2 import Template
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
-from util import short_metric_names
+from report_creation.util import short_metric_names
 
 
 def get_meta(analysis_out: Path) -> Dict:
