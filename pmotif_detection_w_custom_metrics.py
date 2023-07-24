@@ -26,19 +26,7 @@ from pmotif_lib.p_metric.metric_processing import calculate_metrics
 from custom_pmetrics.ExternalWeight import ExternalWeight
 from custom_pmetrics.GivenModuleParticipation import GivenModuleParticipation
 from custom_pmetrics.InternalWeight import InternalWeight
-
-
-def assert_validity(pmotif_graph: PMotifGraph):
-    """Raises a ValueError of underlying graph is not valid for gtrieScanner input"""
-    nx_graph = pmotif_graph.load_graph()
-
-    if len(list(nx.selfloop_edges(nx_graph))) > 0:
-        raise ValueError("Graph contains Self-Loops!")  # Asserts simple graph
-
-    if min(map(int, nx_graph.nodes)) < 1:
-        raise ValueError(
-            "Graph contains node ids below '1'!"
-        )  # Assert the lowest node index is >= 1
+from util import assert_validity
 
 
 def process_graph(
