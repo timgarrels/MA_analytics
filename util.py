@@ -2,11 +2,13 @@ from enum import Enum
 from typing import List
 
 import networkx as nx
-from pmotif_lib.config import GTRIESCANNER_EXECUTABLE
 from pmotif_lib.gtrieScanner.wrapper import run_gtrieScanner
 from pmotif_lib.p_metric import p_metric as PMetric
 from pmotif_lib.p_metric.metric_processing import calculate_metrics
 from pmotif_lib.p_motif_graph import PMotifGraph
+
+
+GTRIESCANNER_EXECUTABLE = "gtrieScanner"  # in PATH
 
 
 def assert_validity(pmotif_graph: PMotifGraph):
@@ -23,8 +25,8 @@ def assert_validity(pmotif_graph: PMotifGraph):
 
 
 class EdgelistFormat(Enum):
-    simple: "u v"
-    simple_weight: "u v weight"
+    SIMPLE = "u v"
+    SIMPLE_WEIGHT = "u v weight"
 
 
 def get_edgelist_format(edgelist) -> EdgelistFormat:
@@ -32,9 +34,9 @@ def get_edgelist_format(edgelist) -> EdgelistFormat:
         l = f.readline()
         parts = l.split(" ")
         if len(parts) == 3:
-            return EdgelistFormat.simple_weight
+            return EdgelistFormat.SIMPLE_WEIGHT
 
-    return EdgelistFormat.simple
+    return EdgelistFormat.SIMPLE
 
 
 def process_graph(
@@ -42,6 +44,7 @@ def process_graph(
     graphlet_size: int,
     metrics: List[PMetric.PMetric],
     edgelist_format: EdgelistFormat,
+    workers: int = 1,
     check_validity: bool = True,
 ):
     """Run a graphlet detection and metric calculation (if any) on the given graph."""
@@ -54,10 +57,11 @@ def process_graph(
         directed=False,
         graphlet_size=graphlet_size,
         output_directory=pmotif_graph.get_graphlet_directory(),
-        with_weights=True if edgelist_format == EdgelistFormat.simple_weight else False,
+        with_weights=True if edgelist_format == EdgelistFormat.SIMPLE_WEIGHT else False,
     )
 
     if len(metrics) == 0:
         return
 
-    calculate_metrics(pmotif_graph, graphlet_size, metrics, True)
+    calculate_metrics(pmotif_graph, graphlet_size, metrics, True, workers=workers)
+

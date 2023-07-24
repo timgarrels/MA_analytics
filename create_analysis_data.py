@@ -6,24 +6,21 @@ from multiprocessing import Pool
 from pathlib import Path
 from statistics import median
 from typing import Dict
+from scipy.stats import mannwhitneyu
+from tqdm import tqdm
 
 import pandas as pd
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, get_graphlet_size_from_class
 from pmotif_lib.p_metric.metric_consolidation import metrics
 from pmotif_lib.p_motif_graph import PMotifGraphWithRandomization, PMotifGraph
 from pmotif_lib.result_transformer import ResultTransformer
-from scipy.stats import mannwhitneyu
-from tqdm import tqdm
+
+from pmotif_cml_interface import add_common_args, add_analysis_out_arg, add_workers_arg, add_experiment_out_arg
 
 ORIGINAL_MISSING_GRAPHLET_CLASS = "ORIGINAL_MISSING_GRAPHLET_CLASS"
 RANDOM_MISSING_GRAPHLET_CLASS = "RANDOM_MISSING_GRAPHLET_CLASS"
 
 SUPRESS_TQDM = True
-
-DATASET_DIRECTORY = Path(os.getenv("DATASET_DIRECTORY"))
-EXPERIMENT_OUT = Path(os.getenv("EXPERIMENT_OUT"))
-
-WORKERS = int(os.getenv("WORKERS", default="1"))
 
 
 def add_consolidated_metrics(result: ResultTransformer) -> ResultTransformer:
@@ -112,12 +109,12 @@ def process_random_graph(analysis_out: Path, original_r: ResultTransformer, rand
             json.dump(data, out)
 
 
-def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path):
+def compute_pairwise_results(original_r: ResultTransformer, analysis_out: Path, workers: int):
     """Compare the original result with each random graph, sequentially per metric.
     Stores the result on disk, grouped by metric and random graph."""
     randomized_graph = PMotifGraphWithRandomization.create_from_pmotif_graph(original_r.pmotif_graph, -1)
 
-    with Pool(processes=WORKERS) as pool:
+    with Pool(processes=workers) as pool:
         compare_args = [
             (analysis_out, original_r, r_g)
             for r_g in randomized_graph.swapped_graphs
@@ -159,13 +156,13 @@ def dump_graphlet_occurrences(r: ResultTransformer, analysis_out: Path):
         json.dump(dict(occurrences), out)
 
 
-def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int):
+def create_analysis_data(analysis_out: Path, experiment_out: Path, edgelist: Path, graphlet_size: int, workers: int):
     """Calculate frequency data and (consolidated) pmetric data and store to disk for later use."""
     analysis_out = analysis_out / edgelist.name
     analysis_out = analysis_out / "raw" / str(graphlet_size)
     os.makedirs(analysis_out, exist_ok=True)
 
-    graphlet_data = EXPERIMENT_OUT / edgelist.stem
+    graphlet_data = experiment_out / edgelist.stem
 
     original_r = ResultTransformer.load_result(edgelist, graphlet_data, graphlet_size, supress_tqdm=SUPRESS_TQDM)
     dump_frequency(analysis_out, original_r)
@@ -175,16 +172,25 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int)
     dump_graphlet_occurrences(original_r, analysis_out)
 
     try:
-        compute_pairwise_results(original_r, analysis_out)
+        compute_pairwise_results(original_r, analysis_out, workers=workers)
     except FileNotFoundError:
         raise FileNotFoundError("Most likely there are no edge swapping?")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--analysis_out", required=True, type=Path)
-    parser.add_argument("--edgelist_name", required=True, type=Path)
-    parser.add_argument("--graphlet_size", required=True, type=int, default=3, choices=[3, 4])
+
+    add_common_args(parser)
+    add_experiment_out_arg(parser)
+    add_analysis_out_arg(parser)
+    add_workers_arg(parser)
 
     args = parser.parse_args()
-    create_analysis_data(args.analysis_out, DATASET_DIRECTORY / args.edgelist_name, args.graphlet_size)
+
+    create_analysis_data(
+        analysis_out=args.analysis_out,
+        experiment_out=args.experiment_out,
+        edgelist=args.edgelist_path,
+        graphlet_size=args.graphlet_size,
+        workers=args.workers,
+    )

@@ -10,10 +10,6 @@ from typing import List
 import networkx as nx
 
 from pmotif_lib.p_motif_graph import PMotifGraph
-from pmotif_lib.config import (
-    EXPERIMENT_OUT,
-    DATASET_DIRECTORY,
-)
 from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
@@ -21,6 +17,7 @@ from pmotif_lib.p_metric.p_graph_module_participation import PGraphModulePartici
 from custom_pmetrics.ExternalWeight import ExternalWeight
 from custom_pmetrics.GivenModuleParticipation import GivenModuleParticipation
 from custom_pmetrics.InternalWeight import InternalWeight
+from pmotif_cml_interface import add_common_args, add_experiment_out_arg
 from util import process_graph, get_edgelist_format
 
 
@@ -65,39 +62,42 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edgelist_name", required=True, type=str)
-    parser.add_argument("--edgelist_name_w_weight", required=True, type=str)
+    add_common_args(parser)
+    add_experiment_out_arg(parser)
+    parser.add_argument("--weighted-edgelist-path", required=True, type=Path)
     parser.add_argument(
-        "--node_mapping",
+        "--node-mapping",
         required=False,
-        type=str,
-        help="JSON of nodemapping to apply to the `edgelist_name_w_weight` graph and the `node_modules` nodes.",
+        type=Path,
+        help="Path to JSON of nodemapping to apply to the `edgelist_name_w_weight` graph and the `node_modules` nodes.",
     )
-    parser.add_argument("--node_modules", required=True, type=str)
     parser.add_argument(
-        "--graphlet_size", required=True, type=int, default=3, choices=[3, 4]
+        "--node-modules",
+        required=True,
+        type=Path,
+        help="Path to JSON of node modules.",
     )
 
     args = parser.parse_args()
     # General Args
-    graph_edgelist = DATASET_DIRECTORY / args.edgelist_name
-    out = EXPERIMENT_OUT / graph_edgelist.stem
+    graph_edgelist = args.edgelist_path
+    out = args.experiment_out / graph_edgelist.stem
     graphlet_size = args.graphlet_size
 
     # External knowledge Args
-    weighted_graph_edgelist = DATASET_DIRECTORY / args.edgelist_name_w_weight
+    weighted_graph_edgelist = args.weighted_edgelist_path
     weighted_graph = nx.read_edgelist(weighted_graph_edgelist)
 
     node_mapping = {}
     if args.node_mapping:
-        with open(DATASET_DIRECTORY / args.node_mapping, "r") as f:
+        with open(args.node_mapping, "r") as f:
             node_mapping = json.load(f)
     weighted_graph = nx.relabel_nodes(
         weighted_graph,
         {v: k for k, v in node_mapping.items()},  # Invert node mapping to original -> gtrie
     )
 
-    with open(DATASET_DIRECTORY / args.node_modules, "r") as f:
+    with open(args.node_modules, "r") as f:
         modules = json.load(f)
     reverse_node_mapping = {v: k for k, v in node_mapping.items()}
     mapped_modules = []

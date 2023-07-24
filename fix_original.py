@@ -1,8 +1,8 @@
-"""The pmotif detection script had a bug:
-It did not check whether the input graph had weights or not, which can mess up the input parsing of the gtrieScanner.
-This script recomputes the motifs and pmetrics of the original graph, not touching the random graphs.
-This saves time, but corrects the mistake.
-However, analysis data will have to be recomputed anyways.
+"""The pMotif detection script had a bug:
+It did not check whether the input graph had weights or not, which can mess up the input parsing of the gTrieScanner.
+This script recomputes the motifs and pMetrics of the original graph, not touching the random graphs.
+Corrects the mistake while saving time by not recomputing everything.
+However, analysis data was created on faulty data, and will have to be recomputed.
 """
 import argparse
 import shutil
@@ -10,14 +10,11 @@ from os import makedirs
 from pathlib import Path
 
 from pmotif_lib.p_motif_graph import PMotifGraph
-from pmotif_lib.config import (
-    EXPERIMENT_OUT,
-    DATASET_DIRECTORY,
-)
 from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
 
+from pmotif_cml_interface import add_common_args, add_experiment_out_arg
 from util import process_graph, get_edgelist_format
 
 
@@ -43,17 +40,14 @@ def main(edgelist: Path, out: Path, graphlet_size: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edgelist_name", required=True, type=str)
-    parser.add_argument(
-        "--graphlet_size", required=True, type=int, default=3, choices=[3, 4]
-    )
-
+    add_common_args(parser)
+    add_experiment_out_arg(parser)
     args = parser.parse_args()
 
-    GRAPH_EDGELIST = DATASET_DIRECTORY / args.edgelist_name
-    OUT = EXPERIMENT_OUT / GRAPH_EDGELIST.stem
+    GRAPH_EDGELIST = args.edgelist_path
+    OUT = args.experiment_out / GRAPH_EDGELIST.stem
     GRAPHLET_SIZE = args.graphlet_size
 
     makedirs(OUT, exist_ok=True)
 
-    main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE)
+    main(args.edgelist_path, OUT, GRAPHLET_SIZE)

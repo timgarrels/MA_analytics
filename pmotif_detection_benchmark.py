@@ -9,26 +9,26 @@ from tqdm import tqdm
 
 from pmotif_lib.p_metric.p_metric import PMetric
 from pmotif_lib.p_motif_graph import PMotifGraph, PMotifGraphWithRandomization
-from pmotif_lib.config import (
-    GTRIESCANNER_EXECUTABLE,
-    EXPERIMENT_OUT,
-    DATASET_DIRECTORY,
-)
 from pmotif_lib.gtrieScanner.wrapper import run_gtrieScanner
 from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
 from pmotif_lib.p_metric.metric_processing import calculate_metrics
 
-from util import assert_validity
+from pmotif_cml_interface import add_common_args, add_experiment_out_arg, add_workers_arg
+from util import assert_validity, get_edgelist_format, EdgelistFormat
+
+
+GTRIESCANNER_EXECUTABLE = "gtrieScanner"  # is in PATH
 
 
 def process_graph(
     pmotif_graph: PMotifGraph,
     graphlet_size: int,
     metrics: List[PMetric],
+    edgelist_format: EdgelistFormat,
+    workers: int,
     check_validity: bool = True,
-    with_weights: bool = False,
 ) -> Dict[str, float]:
     """Run a graphlet detection and metric calculation (if any) on the given graph measuring
     runtimes."""
@@ -42,7 +42,7 @@ def process_graph(
         directed=False,
         graphlet_size=graphlet_size,
         output_directory=pmotif_graph.get_graphlet_directory(),
-        with_weights=with_weights,
+        with_weights=True if edgelist_format == EdgelistFormat.SIMPLE_WEIGHT else False,
     )
     graphlet_runtime = time.time() - graphlet_runtime_start
 
@@ -50,7 +50,7 @@ def process_graph(
         return {}
 
     metric_runtime_start = time.time()
-    calculate_metrics(pmotif_graph, graphlet_size, metrics, True)
+    calculate_metrics(pmotif_graph, graphlet_size, metrics, True, workers=workers)
     metric_runtime = time.time() - metric_runtime_start
     return {
         "graphlet_runtime": graphlet_runtime,
@@ -58,7 +58,7 @@ def process_graph(
     }
 
 
-def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
+def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0, workers: int = 1):
     """Create three p-Metrics, generate random graphs from the original graph, and
     run a p-motif detection on the graphs (or a graphlet-detection if random_graphs=0),
     collecting runtime logs."""
@@ -66,19 +66,12 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
 
     pmotif_graph = PMotifGraph(edgelist, out)
 
-    with open(edgelist, "r", encoding="utf-8") as f:
-        l = f.readline()
-        parts = l.split(" ")
-        if len(parts) == 3:
-            with_weights = True
-        else:
-            with_weights = False
-
     log_r = process_graph(
         pmotif_graph,
         graphlet_size,
         metrics,
-        with_weights=with_weights,
+        workers=workers,
+        edgelist_format=get_edgelist_format(edgelist),
     )
     for runtime_name, runtime in log_r.items():
         logger.info("%s: %s", runtime_name, runtime)
@@ -105,8 +98,9 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
             swapped_graph,
             graphlet_size,
             metrics,
+            workers=workers,
             check_validity=False,
-            with_weights=True,  # Random Graphs are generated to contain weights
+            edgelist_format=EdgelistFormat.SIMPLE_WEIGHT,  # Random Graphs are generated to contain weights
         )
         for runtime_name, runtime in log_r.items():
             logger.info("Random %s, %s: %s", i, runtime_name, runtime)
@@ -114,22 +108,21 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edgelist_name", required=True, type=str)
+    add_common_args(parser)
+    add_experiment_out_arg(parser)
+    add_workers_arg(parser)
+    parser.add_argument("--random-graphs", required=False, type=int, default=0)
     parser.add_argument(
-        "--graphlet_size", required=True, type=int, default=3, choices=[3, 4]
-    )
-    parser.add_argument("--random_graphs", required=False, type=int, default=0)
-    parser.add_argument(
-        "--benchmarking_run", required=True, type=int, choices=[1, 2, 3, 4, 5]
+        "--benchmarking-run", required=True, type=int, choices=[1, 2, 3, 4, 5]
     )
 
     args = parser.parse_args()
 
-    GRAPH_EDGELIST = DATASET_DIRECTORY / args.edgelist_name
+    GRAPH_EDGELIST = args.edgelist_path
     GRAPHLET_SIZE = args.graphlet_size
     RANDOM_GRAPHS = args.random_graphs
     BENCHMARKING_RUN = args.benchmarking_run
-    OUT = EXPERIMENT_OUT / f"bench_{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}"
+    OUT = args.experiment_out / f"bench_{BENCHMARKING_RUN}_{GRAPH_EDGELIST.stem}"
 
     makedirs(OUT, exist_ok=True)
     logs_out = OUT
@@ -147,6 +140,6 @@ if __name__ == "__main__":
     logger = logging.getLogger("benchmark")
 
     total_runtime_start = time.time()
-    main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, RANDOM_GRAPHS)
+    main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, RANDOM_GRAPHS, workers=args.workers)
     total_runtime = time.time() - total_runtime_start
     logger.info("Total Runtime: %s", total_runtime)

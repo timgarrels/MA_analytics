@@ -6,18 +6,15 @@ from pathlib import Path
 from tqdm import tqdm
 
 from pmotif_lib.p_motif_graph import PMotifGraph, PMotifGraphWithRandomization
-from pmotif_lib.config import (
-    EXPERIMENT_OUT,
-    DATASET_DIRECTORY,
-)
 from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
 
+from pmotif_cml_interface import add_common_args, add_experiment_out_arg, add_workers_arg
 from util import process_graph, get_edgelist_format, EdgelistFormat
 
 
-def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
+def main(edgelist: Path, out: Path, graphlet_size: int, workers: int = 1, random_graphs: int = 0):
     """Create three p-Metrics, generate random graphs from the original graph, and
     run a p-motif detection on the graphs (or a graphlet-detection if random_graphs=0)."""
     degree = PDegree()
@@ -30,6 +27,7 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
         pmotif_graph,
         graphlet_size,
         [degree, anchor_node, graph_module_participation],
+        workers=workers,
         edgelist_format=get_edgelist_format(edgelist),
     )
 
@@ -50,25 +48,24 @@ def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
             graphlet_size,
             [degree, anchor_node, graph_module_participation],
             check_validity=False,
-            edgelist_format=EdgelistFormat.simple_weight,  # Random Graphs are generated to contain weights
+            edgelist_format=EdgelistFormat.SIMPLE_WEIGHT,  # Random Graphs are generated to contain weights
         )
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edgelist_name", required=True, type=str)
-    parser.add_argument(
-        "--graphlet_size", required=True, type=int, default=3, choices=[3, 4]
-    )
-    parser.add_argument("--random_graphs", required=False, type=int, default=0)
+    add_common_args(parser)
+    add_experiment_out_arg(parser)
+    add_workers_arg(parser)
+    parser.add_argument("--random-graphs", required=False, type=int, default=1)
 
     args = parser.parse_args()
 
-    GRAPH_EDGELIST = DATASET_DIRECTORY / args.edgelist_name
-    OUT = EXPERIMENT_OUT / GRAPH_EDGELIST.stem
+    GRAPH_EDGELIST = args.edgelist_path
+    OUT = args.experiment_out / GRAPH_EDGELIST.stem
     GRAPHLET_SIZE = args.graphlet_size
     RANDOM_GRAPHS = args.random_graphs
 
     makedirs(OUT, exist_ok=True)
 
-    main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, RANDOM_GRAPHS)
+    main(GRAPH_EDGELIST, OUT, GRAPHLET_SIZE, random_graphs=RANDOM_GRAPHS, workers=args.workers)
