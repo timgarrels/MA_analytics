@@ -174,7 +174,10 @@ def create_analysis_data(analysis_out: Path, edgelist: Path, graphlet_size: int)
     dump_consolidated_metrics(original_r, analysis_out)
     dump_graphlet_occurrences(original_r, analysis_out)
 
-    compute_pairwise_results(original_r, analysis_out)
+    try:
+        compute_pairwise_results(original_r, analysis_out)
+    except FileNotFoundError:
+        raise FileNotFoundError("Most likely there are no edge swapping?")
 
 
 if __name__ == "__main__":
