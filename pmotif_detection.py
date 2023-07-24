@@ -2,50 +2,19 @@
 import argparse
 from os import makedirs
 from pathlib import Path
-from typing import List
 
 from tqdm import tqdm
 
-import pmotif_lib.p_metric.p_metric as PMetric
 from pmotif_lib.p_motif_graph import PMotifGraph, PMotifGraphWithRandomization
 from pmotif_lib.config import (
-    GTRIESCANNER_EXECUTABLE,
     EXPERIMENT_OUT,
     DATASET_DIRECTORY,
 )
-from pmotif_lib.gtrieScanner.wrapper import run_gtrieScanner
 from pmotif_lib.p_metric.p_anchor_node_distance import PAnchorNodeDistance
 from pmotif_lib.p_metric.p_degree import PDegree
 from pmotif_lib.p_metric.p_graph_module_participation import PGraphModuleParticipation
-from pmotif_lib.p_metric.metric_processing import calculate_metrics
 
-from util import assert_validity
-
-
-def process_graph(
-    pmotif_graph: PMotifGraph,
-    graphlet_size: int,
-    metrics: List[PMetric.PMetric],
-    check_validity: bool = True,
-    with_weights: bool = False,
-):
-    """Run a graphlet detection and metric calculation (if any) on the given graph."""
-    if check_validity:
-        assert_validity(pmotif_graph)
-
-    run_gtrieScanner(
-        graph_edgelist=pmotif_graph.get_graph_path(),
-        gtrieScanner_executable=GTRIESCANNER_EXECUTABLE,
-        directed=False,
-        graphlet_size=graphlet_size,
-        output_directory=pmotif_graph.get_graphlet_directory(),
-        with_weights=with_weights,
-    )
-
-    if len(metrics) == 0:
-        return
-
-    calculate_metrics(pmotif_graph, graphlet_size, metrics, True)
+from util import process_graph
 
 
 def main(edgelist: Path, out: Path, graphlet_size: int, random_graphs: int = 0):
