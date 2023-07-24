@@ -11,7 +11,7 @@ import json
 from pmotif_lib.graphlet_representation import graphlet_classes_from_size, graphlet_class_to_name
 from tqdm import tqdm
 
-from report_creation.util import get_frequency_data, get_zscore, figsize, dpi, font_size
+from report_creation.util import get_frequency_data, get_zscore, figsize, dpi, font_size, short_metric_names
 
 plt.rcParams.update({'font.size': font_size})
 
@@ -67,7 +67,7 @@ def plot_frequency_histogram(analysis_out: Path, original: Path, random_graphs: 
         ax.axvline(
             highlight,
             color="tab:orange",
-            label=f"Original (zscore={round(z_score, 2)})",
+            label=f"Original",
         )
 
         ax.set_title(graphlet_class_to_name(graphlet_class))
@@ -182,7 +182,7 @@ def plot_sample_median(
         label=f"Original ({round(original_median, 2)})",
     )
     ax.set_title(graphlet_class_to_name(graphlet_class))
-    ax.set_xlabel(f"{metric_name} median")
+    ax.set_xlabel(f"{short_metric_names[metric_name]} median")
     ax.set_ylabel("#")
     ax.legend()
 

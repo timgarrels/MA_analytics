@@ -8,7 +8,7 @@ from typing import Dict, List, Tuple
 from matplotlib import pyplot as plt
 from pmotif_lib.graphlet_representation import graphlet_class_to_name
 from tqdm import tqdm
-from report_creation.util import figsize, dpi, font_size
+from report_creation.util import figsize, dpi, font_size, short_metric_names
 
 plt.rcParams.update({'font.size': font_size})
 
@@ -24,7 +24,7 @@ def graphlet_pie_chart(frequency_data: Dict[str, int], analysis_out: Path):
     fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     labels = [graphlet_class_to_name(graphlet_class) for graphlet_class in frequency_data.keys()]
     ax.pie(frequency_data.values(), labels=labels)
-    ax.set_title("Distribution of Graphlet Classes in the original graph.")
+    ax.set_title("Distribution of Graphlet Classes\nin the original graph.")
     ax.legend()
 
     fig.tight_layout()
@@ -46,11 +46,12 @@ def metric_distribution(original: Path, analysis_out: Path):
             fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
             ax.hist(
                 metric_values,
-                label=metric_name,
             )
             title = graphlet_class_to_name(graphlet_class)
             ax.set_title(title)
-            ax.legend()
+
+            ax.set_xlabel(short_metric_names[metric_name])
+            ax.set_ylabel("#")
 
             fig.tight_layout()
 
